@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.SignUp {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem 8rem;
+}
+.SignUp-SocialLogin {
+  padding: 0rem 2em;
+}
+.SignUp-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.SignUp-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+}
+
+.SignUp-SignInSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins-Bold";
+  margin-bottom: 1rem;
+}
+
+.SignUp-SignInSection p,
+.SignUp-SocialLogin p {
+  margin: 0rem;
+  font-family: "Poppins-Bold";
+}
+.SignUp-SignInSection__Link {
+  color: rgb(211, 0, 214);
+  font-size: 28px;
+  margin-bottom: 0rem;
+  margin-left: 5px;
+}
+.SignUp-SocialLogin p {
+  color: rgb(211, 0, 214);
+}
+.PhoneInput-Input {
+  width: 100% !important;
+  padding: 1.5rem 5rem !important;
+}
+.PhoneInput-Dropdown {
+  padding: 5px !important;
+  width: 10% !important;
+  outline: none !important;
+}
+.PhoneInput-Dropdown:focus {
+  outline: none !important;
+}
+.SignUp-Input,
+.PhoneInput-Input {
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 1.5rem;
+  margin: 1rem 0rem !important;
+}
+.SignUp-Form {
+  display: flex;
+  flex-direction: column;
+}
+.SignUp-Btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+.SignUp-Btns__Submit {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+  background-color: rgb(211, 0, 214);
+  border: 1px solid rgb(211, 0, 214);
+  transition: 0.2s;
+  cursor: pointer;
+  align-self: center;
+}
+
+.SignUp-Btns__Submit:hover {
+  background-color: rgb(162, 0, 165);
+}
+.SignUp-Btns__SubmitDisable,
+.SignUp-Btns__SubmitDisable:hover {
+  color: #fff;
+  background-color: gray;
+  border: 1px solid gray;
+  cursor: default;
+}
+.SignUp-SocialMedia {
+  display: flex;
+  flex-wrap: wrap;
+}
+.SignUp-Social {
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.2rem;
+  transition: 0.2s;
+  font-family: "Poppins-SemiBold";
+}
+
+.SignUp-facebook {
+  background-color: #fff;
+  color: #3b5998;
+  text-decoration: none;
+}
+.SignUp-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.SignUp-Google {
+  background-color: #fff;
+}
+.SignUp-Google:hover {
+  background-color: #4285f4;
+  color: #fff;
+}
+.SignUp-Agreement {
+  display: flex;
+  align-items: center;
+}
+.SignUp-Agreement {
+  margin: 0 0 0 1rem;
+  color: rgb(211, 0, 214);
+  font-family: "Poppins-Bold";
+}
+.SignUp-Agreement__checkbox {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: white;
+  border-radius: 50px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.SignUp-Agreement__checkbox:checked {
+  background-color: gray;
+}
+@keyframes animate-Click {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  30% {
+    transform: rotateY(30deg) rotateX(30deg);
+  }
+  60% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 577px) {
+  .SignUp {
+    padding: 4rem 2rem;
+  }
+  .SignUp-SignInSection {
+    justify-content: flex-start;
+  }
+  .SignUp-SignInSection p {
+    font-size: 15px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignUp-Separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0rem;
+  }
+  .SignUp-Separator p {
+    flex: auto;
+    margin: 0;
+    font-family: "Poppins-SemiBold";
+    font-size: 12px;
+    padding: 0rem 0rem;
+    text-align: center;
+  }
+  .SignUp-Separator span {
+    padding: 0rem 0rem;
+    flex: auto;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(211, 0, 214);
+  }
+
+  .SignUp-SignInSection__Link {
+    font-size: 15px;
+    width: 50%;
+  }
+  .SignUp-UserInfo {
+    border-right: none;
+  }
+  .SignUp-SocialMedia {
+    display: flex;
+    justify-content: center;
+  }
+  .SignUp-Social {
+    width: 45%;
+    font-size: 12px;
+  }
+  .SignUp-SocialLogin {
+    padding: 0rem;
+  }
+  .SignUp-Img {
+    display: none;
+  }
+  .SignUp-Agreement {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .SignUp-SignInSection {
+    justify-content: flex-start;
+  }
+  .SignUp-SocialLogin {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 50% top 20% /15rem
+      58% no-repeat;
+  }
+  .SignUp-SignInSection p,
+  .SignUp-SocialLogin p {
+    font-size: 16px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignUp-SignInSection__Link {
+    font-size: 16px;
+    width: auto;
+  }
+  .SignUp-UserInfo {
+    border-right: 5px solid rgb(211, 0, 214);
+    padding: 0rem 3rem 0rem 0rem;
+  }
+  .SignUp-Social {
+    max-width: 110px;
+    width: 100%;
+    font-size: 12px;
+  }
+  .SignUp-Separator span {
+    display: none;
+  }
+  .SignUp-Img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
+    padding-left: 1rem;
+    animation: animate-Click 5s linear 2s infinite;
+  }
+  .SignUp-Img__Click {
+    width: 10rem;
+  }
+  .SignUp-Separator {
+    margin: 0rem 0rem 2rem;
+  }
+  .SignUp-Agreement {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .SignUp-SignInSection p,
+  .SignUp-SocialLogin p {
+    font-size: 19px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignUp-SignInSection__Link {
+    font-size: 19px;
+    width: auto;
+  }
+  .SignUp-Social {
+    max-width: 150px;
+    width: 100%;
+    font-size: 12px;
+  }
+  .SignUp-SocialLogin {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 50% top 20% /20rem
+      58% no-repeat;
+  }
+  .SignUp-Img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 4rem;
+    padding-left: 4rem;
+  }
+  .SignUp-Img__Click {
+    width: 12rem;
+  }
+
+  .SignUp-Agreement__checkbox {
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 50px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .SignUp-SignInSection {
+    justify-content: center;
+  }
+  .SignUp-SignInSection p,
+  .SignUp-SocialLogin p {
+    font-size: 22px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignUp-SignInSection__Link {
+    font-size: 22px;
+    width: auto;
+  }
+  .SignUp-SocialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 7rem;
+  }
+  .SignUp-SocialLogin {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 80% top 20% /25rem
+      58% no-repeat;
+  }
+  .SignUp-Img__Click {
+    width: 15rem;
+  }
+  .SignUp-Agreement {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .SignUp-SignInSection p,
+  .SignUp-SocialLogin p {
+    font-size: 24px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignUp-SignInSection__Link {
+    font-size: 24px;
+    width: auto;
+  }
+  .SignUp-SocialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 8rem;
+  }
+  .SignUp-Social {
+    max-width: 200px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .SignUp-Img__Click {
+    width: 15rem;
+  }
+  .SignUp-Agreement {
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+  }
+}

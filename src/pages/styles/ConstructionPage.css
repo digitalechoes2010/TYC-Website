@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@keyframes fly {
+  0% {
+    transform: perspective(1000px) rotateY(270deg) translateX(-50vh)
+      translateY(-50%) translateZ(50vw);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(-810deg) translateX(50vh)
+      translateY(50%) translateZ(0);
+  }
+}
+@keyframes sunshine {
+  0%,
+  75% {
+    top: -30vh;
+    transform: scale(0);
+  }
+}
+@keyframes wind {
+  25% {
+    opacity: 0.8;
+    transform: rotateY(90deg) translateX(1000vh);
+  }
+  100% {
+    opacity: 0.8;
+    transform: rotateY(90deg) translateX(-100vh);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+html,
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  z-index: -2;
+}
+img {
+  width: 200px;
+}
+.Main-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: magenta;
+  background: rgba(128, 128, 128, 0);
+  font-family: "Poppins-SemiBold";
+}
+.Construction {
+  margin-top: 1rem;
+}
+.ComingSoon {
+  margin-bottom: 1rem;
+}
+.container {
+  position: absolute;
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  right: 30px;
+  margin: auto;
+  width: 50vh;
+  height: 50vh;
+  transform: rotateY(-90deg) rotateZ(60deg);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  z-index: -1;
+  animation: fly 8s ease-out;
+}
+.sun {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 30px;
+  margin: auto;
+  width: 30vh;
+  max-width: 30vw;
+  height: 30vh;
+  max-height: 30vw;
+  border-radius: 50%;
+  transition: 0.5s;
+  animation: sunshine 8s ease-out;
+  z-index: -2;
+}
+.ltop {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+.ltop:hover ~ .container {
+  transform: perspective(1000px) rotateY(-135deg) translateY(-10vh)
+    translateZ(50vh);
+  transition: 2s;
+}
+.ltop:hover ~ .sun {
+  top: 60vh;
+  right: -10%;
+  transition: 2s;
+}
+.ltop:hover ~ .wind {
+  transform: perspective(800px) rotateX(-15deg) rotateY(-45deg);
+  transform-origin: left;
+  transition: 2s;
+}
+.lbot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+.lbot:hover ~ .container {
+  transform: perspective(1000px) rotateY(-135deg) translateY(10vh)
+    rotateZ(50deg) translateZ(50vh);
+  transition: 2s;
+}
+.lbot:hover ~ .sun {
+  right: -10%;
+  transition: 2s;
+}
+.lbot:hover ~ .wind {
+  transform: perspective(800px) rotateX(10deg) rotateY(-45deg);
+  transform-origin: left;
+  transition: 2s;
+}
+.rtop {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 50%;
+  height: 50%;
+}
+.rtop:hover ~ .container {
+  transform: perspective(1000px) rotateY(-45deg) translateY(-10vh)
+    translateZ(-50vh);
+  transition: 2s;
+}
+.rtop:hover ~ .sun {
+  top: 60vh;
+  left: -10%;
+  transition: 2s;
+}
+.rtop:hover ~ .wind {
+  transform: perspective(800px) rotateX(-15deg) rotateY(45deg);
+  transform-origin: right;
+  transition: 2s;
+}
+.rbot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+}
+.rbot:hover ~ .container {
+  transform: perspective(1000px) rotateY(-45deg) translateY(10vh)
+    translateZ(-50vh) rotateZ(50deg);
+  transition: 2s;
+}
+.rbot:hover ~ .sun {
+  left: -10%;
+  transition: 2s;
+}
+.rbot:hover ~ .wind {
+  transform: perspective(800px) rotateX(10deg) rotateY(45deg);
+  transform-origin: right;
+  transition: 2s;
+}
+#lside {
+  border-top: 25vh solid transparent;
+  border-right: 50vh solid magenta;
+  transform: rotate(-5deg) rotateY(0deg) rotateX(-10deg);
+  transform-origin: bottom;
+}
+#rside {
+  margin-top: -25vh;
+  border-top: 25vh solid transparent;
+  border-right: 50vh solid magenta;
+  transform: rotate(-5deg) rotateY(0deg) rotateX(10deg);
+  transform-origin: bottom;
+}
+#lwing {
+  margin-top: -25vh;
+  border-bottom: 25vh solid orange;
+  border-right: 30vh solid transparent;
+  border-left: 50vh solid transparent;
+  transform: rotate(-22deg) rotateX(55deg) rotateY(-10deg) rotateZ(25deg);
+  transform-origin: top;
+}
+#rwing {
+  margin-top: -25vh;
+  border-bottom: 25vh solid orange;
+  border-right: 30vh solid transparent;
+  border-left: 50vh solid transparent;
+  transform: rotate(-22deg) rotateX(-55deg) rotateY(10deg) rotateZ(25deg);
+  transform-origin: top;
+}
+.wind {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  z-index: -2;
+}
+.wind > div {
+  position: absolute;
+  height: 5px;
+  background: linear-gradient(to right, magenta, transparent);
+  border-radius: 10px;
+  opacity: 0;
+}
+#lw1 {
+  top: 0;
+  left: 10%;
+  width: 20vh;
+  animation: wind 1.2s linear 6s infinite;
+}
+#lw2 {
+  top: 50%;
+  left: 0;
+  width: 50vh;
+  animation: wind 0.8s linear 6s infinite;
+}
+#lw3 {
+  top: 80%;
+  left: 0;
+  width: 40vh;
+  animation: wind 1s linear 6s infinite;
+}
+#rw1 {
+  top: 10%;
+  right: 0;
+  width: 30vh;
+  animation: wind 1s linear 6s infinite;
+}
+#rw2 {
+  top: 20%;
+  right: 0;
+  width: 40vh;
+  animation: wind 1.2s linear 6s infinite;
+}
+#rw3 {
+  top: 70%;
+  right: 0;
+  width: 20vh;
+  animation: wind 1.5s linear 6s infinite;
+}
+#rw4 {
+  top: 100%;
+  right: 20%;
+  width: 50vh;
+  animation: wind 0.8s linear 6s infinite;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    right: 30px;
+    margin: auto;
+    width: 50vh;
+    height: 50vh;
+    transform: rotateY(-90deg) rotateZ(60deg) scale(0.5) scaleZ(0.5) scaleX(0.5)
+      scaleY(0.5);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    z-index: -1;
+    animation: fly 8s ease-out;
+  }
+  .sun {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 75px;
+    margin: auto;
+    width: 30vh;
+    max-width: 30vw;
+    height: 30vh;
+    max-height: 30vw;
+    border-radius: 50%;
+    transition: 0.5s;
+    animation: sunshine 8s ease-out;
+    z-index: -2;
+  }
+  .rbot:hover ~ .container {
+    transform: perspective(1000px) rotateY(-45deg) translateY(10vh)
+      translateZ(-15vh) rotateZ(50deg) scale(0.7) scaleZ(0.7) scaleX(0.7)
+      scaleY(0.7);
+    transition: 2s;
+  }
+  .rtop:hover ~ .container {
+    transform: perspective(1000px) rotateY(-45deg) translateY(30vh)
+      translateZ(-20vh) scale(0.7) scaleZ(0.7) scaleX(0.7) scaleY(0.7);
+    transition: 2s;
+  }
+  .lbot:hover ~ .container {
+    transform: perspective(1000px) rotateY(-135deg) translateY(10vh)
+      rotateZ(50deg) translateZ(10vh) scale(0.7) scaleZ(0.7) scaleX(0.7)
+      scaleY(0.7);
+    transition: 2s;
+  }
+  .ltop:hover ~ .container {
+    transform: perspective(1000px) rotateY(-135deg) translateY(30vh)
+      translateZ(15vh) scale(0.7) scaleZ(0.7) scaleX(0.7) scaleY(0.7);
+    transition: 2s;
+  }
+  img {
+    margin-top: 7rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../../../assets/Fonts/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../../assets/Fonts/Poppins-Medium.ttf);
+}
+
+.TransactionsAccordion-Button {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  border-radius: 20px;
+  border: none;
+  height: 2.5rem;
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+  position: relative;
+}
+.TransactionsAccordion-Button:hover,
+.TransactionsAccordion-Button:active {
+  background-color: rgba(255, 145, 0, 1) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.TransactionsAccordion-Button:focus {
+  background-color: #000;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .TransactionsAccordion-Button {
+    font-size: 5px;
+    padding: 1rem 0px;
+    padding-left: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .TransactionsAccordion-Button {
+    font-size: 8px;
+    padding: 0.8rem 0px;
+    padding-left: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .TransactionsAccordion-Button {
+    font-size: 10px;
+    padding: 0.7rem 0px;
+    padding-left: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .TransactionsAccordion-Button {
+    font-size: 12px;
+    padding: 0.5rem 0px;
+    padding-left: 1rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .TransactionsAccordion-Button {
+    font-size: 16px;
+    padding: 0.5rem 0px;
+    padding-left: 1rem;
+  }
+}

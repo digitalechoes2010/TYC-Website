@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../../assets/Fonts/Poppins-Medium.ttf);
+}
+.ContactCard {
+  width: fit-content;
+  background-color: #8da2af;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rem;
+  padding:1rem;
+}
+.ContactCard-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ContactCard-ProfilePic__Container {
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2px;
+}
+.ContactCard-ProfilePic {
+  width: 75px;
+  height: 75px;
+  border-radius: 200rem;
+  overflow: hidden;
+  cursor: pointer;
+  object-fit: cover;
+}
+.ContactCard-Info p {
+  font-family: "Poppins-Medium";
+  margin: 0;
+  overflow-wrap: break-word;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.ContactCard-Maps {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactCard-MapsLink {
+  width: 50%;
+  height: 50%;
+  border-radius: 200rem;
+  overflow: hidden;
+  color: #fff;
+  background-color: #9a4f9e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ContactCard-MapsLink:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: -1px 1px 42px 1px rgba(162, 0, 165, 0.57);
+  -webkit-box-shadow: -1px 1px 42px 1px rgba(162, 0, 165, 0.57);
+  -moz-box-shadow: -1px 1px 42px 1px rgba(162, 0, 165, 0.57);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 577px) {
+  .ContactCard {
+    width: 100%;
+    height: 6rem;
+    background-color: #8da2af;
+    border-radius: 50px;
+    display: flex;
+    padding-top: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  .ContactCard-ProfilePic {
+    width: 75px;
+    height: 75px;
+    border-radius: 200rem;
+    overflow: hidden;
+    margin-left: 0rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

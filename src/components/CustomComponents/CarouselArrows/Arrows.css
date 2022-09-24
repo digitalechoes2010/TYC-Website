@@ -1,0 +1,123 @@
+.Arrow-div {
+  position: absolute;
+  top: 50%;
+}
+.Arrow-svg {
+  width: 30px;
+  height: auto;
+  margin: 0 2rem;
+  cursor: pointer;
+  overflow: visible;
+}
+.Arrow-svg polygon,
+.Arrow-svg path {
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.Arrow-div :hover polygon,
+.Arrow-div :hover path {
+  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  fill: rgba(252, 0, 255, 1);
+}
+.Arrow-div :hover .arrow {
+  animation: arrow-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.Arrow-div :hover .arrow-fixed {
+  animation: arrow-fixed-anim 2.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.Arrow-div.Right {
+  right: -12%;
+}
+.Arrow-div.Left {
+  left: -12%;
+}
+@keyframes arrow-anim {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  5% {
+    transform: translateX(-0.1rem);
+  }
+  100% {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+}
+@keyframes arrow-fixed-anim {
+  5% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Arrow-div.Right {
+    right: -10%;
+  }
+  .Arrow-div.Left {
+    left: -10%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Arrow-div.Right {
+    right: -10%;
+  }
+  .Arrow-div.Left {
+    left: -10%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .Arrow-div.Right {
+    right: -18%;
+  }
+  .Arrow-div.Left {
+    left: -18%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .Arrow-div.Right {
+    right: -25%;
+  }
+  .Arrow-div.Left {
+    left: -25%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Arrow-div.Right {
+    right: -5%;
+  }
+  .Arrow-div.Left {
+    left: -5%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Arrow-div.Right {
+    right: -5%;
+  }
+  .Arrow-div.Left {
+    left: -5%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  .Arrow-div.Right {
+    right: -12%;
+  }
+  .Arrow-div.Left {
+    left: -12%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,48 @@
+.category-tabs {
+  border-bottom: none;
+  margin: 2rem 0rem 1rem;
+  width: 100%;
+}
+.categoryTabs-Headers {
+  text-align: center;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: grey;
+  color: #fff !important;
+  font-family: "Medula One";
+  border: none !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  cursor: pointer;
+  font-size: 16.5px;
+}
+
+.category-tabs_Item {
+  margin-bottom: 1rem;
+}
+.category-tabs_Item .active {
+  background: rgb(255, 97, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 97, 0, 1) 0%,
+    rgba(255, 145, 0, 1) 47%,
+    rgba(253, 255, 161, 1) 100%
+  );
+  border-bottom: none !important;
+}
+.categoryTabs:hover,
+.categoryTabs:active {
+  background: rgb(213, 67, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 67, 0, 1) 0%,
+    rgba(210, 123, 0, 1) 47%,
+    rgba(206, 208, 132, 1) 100%
+  );
+}
+
+.categoryTabs:active {
+  transform: scale(0.9);
+  transform-origin: center;
+}

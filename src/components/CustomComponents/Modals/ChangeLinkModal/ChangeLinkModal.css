@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.ChangeLink-AddButton {
+  font-family: "Poppins-SemiBold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 10rem;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #8da2af;
+  color: #fff;
+  margin-top: 1rem;
+}
+.ChangeLink {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  border-radius: 0;
+}
+.ChangeLink:last-child {
+  border-bottom: none;
+}
+.ChangeLink-AddButton:hover {
+  transform: scale(1.05);
+}
+.ChangeLink-Input {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+}
+
+.ChangeLink-ModalContent {
+  background-color: rgb(245, 245, 245) !important;
+  border: none !important;
+  font-family: "Poppins-SemiBold" !important;
+}
+
+.ChangeLink-SubmitButton {
+  background-color: rgb(211, 0, 214);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+.ChangeLink-CancelButton {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+.ChangeLink-SubmitButton:hover {
+  background-color: rgb(197, 0, 201);
+  border: none;
+}
+.ChangeLink-CancelButton:hover {
+  background-color: #5f666d;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ChangeLink-AddButton {
+    margin-top: 0rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

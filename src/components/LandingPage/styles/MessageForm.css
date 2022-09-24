@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Medula One";
+  src: url(../../../assets/Fonts/MedulaOne-Regular.ttf);
+}
+.Form {
+  height: auto;
+  padding: 3rem 0rem;
+  margin: none;
+  font-family: "Medula One";
+  background: url(../../../assets/SVGs/TYCbg.svg) 10% 30%/90% no-repeat;
+}
+
+.Form-Title {
+  color: #fff;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  font-family: "Poppins-SemiBold";
+  font-size: 19.6px;
+}
+.Form-Input,
+.Form-Input__TextArea,
+.Form-Email {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 0.5rem 1.8rem;
+  border: 1px solid gray;
+  font-size: 21.8px;
+  outline: none;
+}
+
+.Form-Input__TextArea {
+  resize: none;
+  height: 12rem;
+  margin-top: 1rem;
+}
+.Form-Email__Error {
+  color: red;
+  font-family: "Medula One";
+  font-size: 1.1rem;
+}
+.Form-Btn {
+  width: 20%;
+  min-width: 121.6px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background: rgb(255, 97, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 97, 0, 1) 0%,
+    rgba(255, 145, 0, 1) 47%,
+    rgba(253, 255, 161, 1) 100%
+  );
+  color: #fff;
+  font-size: 17.8px;
+}
+.Form-Btn__Col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+}
+.Form-Btn:hover,
+.Form-Btn:active {
+  background: rgb(213, 67, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 67, 0, 1) 0%,
+    rgba(210, 123, 0, 1) 47%,
+    rgba(206, 208, 132, 1) 100%
+  );
+}
+
+.Form-Btn:active {
+  transform: scale(0.9);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Form {
+    padding-top: 0rem;
+    background: url(../../../assets/SVGs/TYCbg.svg) top/90% no-repeat;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Form {
+    background: url(../../../assets/SVGs/TYCbg.svg) 10% 20%/90% no-repeat;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Form {
+    background: url(../../../assets/SVGs/TYCbg.svg) 10% 30%/90% no-repeat;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,399 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.DownloadApp {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem 4rem;
+}
+.DownloadApp-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.DownloadApp-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+
+.DownloadApp-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.DownloadApp-downloadContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem;
+  width: 100%;
+  margin-right: 1rem;
+}
+.DownloadApp-descriptionRow {
+  padding: 1rem 4rem;
+  font-family: "Poppins-Medium";
+}
+.DownloadApp-descriptionRow p {
+  width: 100%;
+}
+.DownloadApp-downloadContainer:first-of-type {
+  margin-top: 0rem;
+}
+.DownloadApp-downloadRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.DownloadApp-planeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DownloadApp__Btns p {
+  margin: 0;
+  color: #a200a5;
+}
+.DownloadApp__Btns .Google {
+  width: 0.9rem;
+}
+
+.DownloadApp__Btns .Apple {
+  margin-left: -1rem;
+  width: 1.1rem;
+}
+
+.DownloadApp__Btns:hover {
+  background: rgb(254, 254, 254);
+  background: linear-gradient(
+    354deg,
+    rgba(254, 254, 254, 1) 0%,
+    rgba(235, 235, 235, 1) 29%,
+    rgba(231, 231, 231, 1) 57%,
+    rgba(212, 212, 212, 1) 100%,
+    rgba(187, 187, 187, 1) 100%
+  );
+  text-decoration: none;
+}
+.paperplane {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  border-radius: 50%;
+  min-width: 400px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .DownloadApp {
+    padding: 2rem 2rem;
+  }
+  .DownloadApp-Header__Title {
+    font-size: 1.5rem;
+  }
+  .DownloadApp {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+  .paperplane {
+    display: none;
+  }
+  .DownloadApp__Btns {
+    font-size: 0.7rem;
+    width: 90%;
+  }
+  .DownloadApp__Btns p {
+    margin-left: 1rem;
+  }
+  .DownloadApp-descriptionRow {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  .DownloadApp__Btns {
+    background-color: #fff;
+    border: 1.5px solid #a200a5;
+    border-radius: 10px;
+    width: 40%;
+    padding: 1rem 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    animation: glow 2s linear infinite;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .DownloadApp {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+  .paperplane {
+    display: none;
+  }
+  .DownloadApp__Btns {
+    background-color: #fff;
+    border: 1.5px solid #a200a5;
+    border-radius: 10px;
+    width: 40%;
+    padding: 1rem 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    animation: glow 2s linear infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .paperplane {
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    display: block;
+  }
+  .plane {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    animation: move 3s linear infinite;
+    transform: translateY(-100px);
+  }
+  .DownloadApp {
+    padding-bottom: 9rem;
+    padding: 2rem 2rem 8rem 2rem;
+  }
+  .DownloadApp__Btns {
+    background-color: #fff;
+    border: 1.5px solid #a200a5;
+    border-radius: 10px;
+    width: 40%;
+    padding: 1rem 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    animation: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .paperplane {
+    width: 400px;
+    height: 400px;
+    min-width: 400px;
+  }
+  .plane {
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    animation: move 3s linear infinite;
+    transform: translateY(-100px);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+@keyframes float {
+  0% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+
+  50% {
+    background-position: right 110% top -8rem, left 100% top 0rem,
+      right 90% top 8rem, left 80% top 16rem;
+  }
+  100% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+  25% {
+    transform: translateY(-30px) rotateX(40deg);
+  }
+  50% {
+    transform: rotateX(0) translateY(0);
+  }
+  75% {
+    transform: rotateX(-40deg) translateY(30px);
+  }
+  100% {
+    transform: rotateX(0) translateY(0);
+  }
+}
+
+.wingRight {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 22.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 115px solid #dd00e0;
+  transform: rotate(61deg);
+  z-index: 4;
+}
+
+.bottom {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25.5px solid #69006b;
+  top: 71px;
+  transform: rotate(-5deg);
+  left: -52.5px;
+  z-index: 3;
+}
+
+.top {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 30px solid #69006b;
+  top: 65px;
+  transform: rotate(5deg);
+  left: -60px;
+  z-index: 1;
+}
+
+.middle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 135px solid #8b008d;
+  top: -13.5px;
+  transform: rotate(72deg);
+  left: -7.5px;
+  z-index: 2;
+}
+
+.wingLeft {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-bottom: 135px solid #dd00e0;
+  transform: rotate(78deg) skewY(-35deg);
+  left: -18.5px;
+  z-index: 3;
+  top: -30px;
+}
+
+.clouds {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+@keyframes cloud {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+.cloudOne,
+.cloudTwo,
+.cloudThree {
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: #ffc400;
+  border-radius: 100px 100px 0 0;
+}
+
+.cloudOne {
+  top: 0;
+  left: 0;
+  animation: cloud 1.8s linear infinite reverse;
+}
+
+.cloudTwo {
+  top: 50px;
+  left: 100px;
+  animation: cloud 1.5s linear infinite reverse;
+}
+
+.cloudThree {
+  top: 250px;
+  left: 50px;
+  animation: cloud 1.2s linear infinite reverse;
+}
+
+.cloudOne:before,
+.cloudTwo:before,
+.cloudThree:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #ffc400;
+  border-radius: 100px 100px 0 0;
+  left: -20px;
+  top: 12.5px;
+  box-shadow: 65px 0 #ffc400;
+}
+.cloudOne:after,
+.cloudTwo:after,
+.cloudThree:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #ffc400;
+  border-radius: 100px 100px 0 0;
+  bottom: 12.5px;
+  left: 20px;
+  box-shadow: 65px #ffc400;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 2.5px 2.5px 10px #ffc400, -2.5px -2.5px 10px #dd00e0;
+  }
+
+  50% {
+    box-shadow: 2.5px 2.5px 10px #dd00e0, -2.5px -2.5px 10px #ffc400;
+  }
+  100% {
+    box-shadow: 2.5px 2.5px 10px #ffc400, -2.5px -2.5px 10px #dd00e0;
+  }
+}

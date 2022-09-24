@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/Fonts/Poppins-Medium.ttf);
+}
+.PublicProfile {
+  padding: 4rem 0rem;
+}
+.PublicProfile-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dashboard-EditProfile {
+  font-family: "Poppins-SemiBold";
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: #8da2af;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.PublicProfile-ProfilePic {
+  border-radius: 20px;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+.PublicProfile-Username {
+  font-family: "Poppins-Bold";
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+.PublicProfile-ProfileLink {
+  width: 100%;
+  text-align: center;
+  color: rgb(211, 0, 214);
+  font-family: "Poppins-Medium";
+}
+
+.PublicProfile-Header__ProfilePic {
+  padding-left: 4rem;
+}
+.PublicProfile_SpinnerContainer {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.Spinner {
+  width: 100%;
+  max-width: 10rem;
+  animation: rotate 3.6s linear infinite;
+}
+
+.Spinner_circle {
+  fill: none;
+  stroke: rgb(211, 0, 214);
+  stroke-width: 8px;
+  stroke-dasharray: 300;
+  animation: outline 2s cubic-bezier(0.77, 0, 0.18, 1) infinite;
+}
+
+@keyframes outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 600;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .PublicProfile {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+
+  .PublicProfile-Header__ProfilePic {
+    padding-left: 2rem;
+  }
+
+  .PublicProfile-ProfileLink {
+    font-size: 0.9rem;
+  }
+}
+.PublicProfile-Accounts__Inactive {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PublicProfile-Accounts__Inactive h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .PublicProfile {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

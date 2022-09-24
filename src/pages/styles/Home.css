@@ -1,0 +1,78 @@
+.Home-Container {
+  padding: 0rem 10rem;
+  background: url(../../assets/SVGs/LandingPageBg-Big.svg) right 0% top -11rem/60rem
+      55% no-repeat,
+    url(../../assets/SVGs/WhatYouSharebg.svg) left 0% top 80rem/53rem 70%
+      no-repeat,
+    linear-gradient(#fff 82%, #000 82%);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Home-Container {
+    padding: 0rem 2rem;
+    background: url(../../assets/SVGs/LandingPageBg-Big.svg) right 100% top -5rem/57rem
+        60% no-repeat,
+      url(../../assets/SVGs/WhatYouSharebg.svg) left 100% top 70rem/48rem 73%
+        no-repeat,
+      linear-gradient(#fff 78%, #000 78%);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Home-Container {
+    padding: 0rem 1rem;
+  }
+
+  .Home-Container {
+    padding: 0rem 2rem;
+    background: url(../../assets/SVGs/LandingPageBg-Big.svg) right 100% top -7rem/61rem
+        58% no-repeat,
+      url(../../assets/SVGs/WhatYouSharebg.svg) left 0rem top 65rem/100% 72%
+        no-repeat,
+      linear-gradient(#fff 78%, #000 78%);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Home-Container {
+    padding: 0rem 5rem;
+  }
+
+  .Home-Container {
+    padding: 0rem 2rem;
+    background: url(../../assets/SVGs/LandingPageBg-Big.svg) right 100% top -3rem/61rem
+        64% no-repeat,
+      url(../../assets/SVGs/WhatYouSharebg.svg) left 0rem top 72rem/100% 77%
+        no-repeat,
+      linear-gradient(#fff 82%, #000 82%);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Home-Container {
+    padding: 0rem 8rem;
+    background: url(../../assets/SVGs/LandingPageBg-Big.svg) right -15rem top -8rem/57rem
+        58% no-repeat,
+      url(../../assets/SVGs/WhatYouSharebg.svg) left -18rem top 80rem/53rem 59.5%
+        no-repeat,
+      linear-gradient(#fff 80%, #000 80%);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Home-Container {
+    padding: 0rem 10rem;
+    background: 
+    /* url(../../assets/Images/slider\ 1.png) left 0% top -2rem/78rem 17%
+        no-repeat, */ url(../../assets/SVGs/LandingPageBg-Big.svg)
+        right 0% top -3rem/60rem 55% no-repeat,
+      url(../../assets/SVGs/WhatYouSharebg.svg) left -7rem top 86rem/51rem 60.5%
+        no-repeat,
+      linear-gradient(#fff 80%, #000 80%);
+  }
+}

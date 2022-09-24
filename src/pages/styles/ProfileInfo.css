@@ -1,0 +1,573 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.ProfileInfo {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 2rem 8rem;
+}
+.ProfileInfo-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.ProfileInfo-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+}
+.ProfileInfo-Form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.ProfileInfo-Pic__Input {
+  display: none;
+}
+.ProfileInfo-Pic__Label {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  cursor: pointer;
+}
+.ProfileInfo-CameraIcon {
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
+}
+.ProfileInfo-Pic__Container {
+  margin-top: 3rem;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.ProfileInfo-Personal__Container,
+.ProfileInfo-Account__Container {
+  width: 30%;
+  padding: 0rem 1rem 0rem 1rem;
+}
+.ProfileInfo-Input,
+.ProfileInfo-Input__textArea {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+  width: 100%;
+}
+.ProfileInfo-Account__MobileInput {
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 1.5rem 1.5rem 1.5rem 4rem !important;
+  margin: 1.2rem 0rem !important;
+  width: 100% !important;
+}
+.ProfileInfo-Account__MobileDropdown {
+  padding: 5px !important;
+  width: 10% !important;
+  outline: none !important;
+}
+
+.ProfileInfo-Account__MobileDropdown:focus {
+  outline: none !important;
+}
+.ProfileInfo-Radio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin: 0;
+}
+.ProfileInfo-Radio__Label {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.ProfileInfo-Radio__optionContainer {
+  display: flex;
+}
+.ProfileInfo-Account__Container {
+  padding-top: 1.4rem;
+}
+.ProfileInfo-Radio__option {
+  font-family: "Poppins-Bold";
+  margin: 0rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+}
+.ProfileInfo-Radio__option p {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+.ProfileInfo-Personal__Header {
+  font-family: "Poppins-Bold";
+  margin: 0rem 0rem 1rem 1rem;
+  font-size: 1.2rem;
+}
+.ProfileInfo-Input__textArea {
+  border-radius: 15px;
+  padding: 1rem;
+  height: 3rem;
+  resize: none;
+}
+.ProfileInfo-Agreement {
+  display: flex;
+  align-items: center;
+}
+.ProfileInfo-Agreement {
+  margin: 0 0 0 1rem;
+  color: rgb(211, 0, 214);
+  font-family: "Poppins-Bold";
+}
+.ProfileInfo-Agreement__checkbox,
+.ProfileInfo-Radio__button {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: white;
+  border-radius: 50px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.ProfileInfo-Agreement__checkbox:checked,
+.ProfileInfo-Radio__button:checked {
+  background-color: gray;
+}
+
+.ProfileInfo-Btns {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0rem;
+  align: center;
+}
+.ProfileInfo-Btns__Submit {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+  background-color: gray;
+  border: 1px solid gray;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.ProfileInfo-Btns__Submit:hover {
+  background-color: rgb(211, 0, 214);
+}
+.ProfileInfo-Pic__ProgressContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ProfileInfo-Pic__Progress {
+  padding: 2rem;
+  font-family: "Poppins-Regular";
+}
+.ProfileInfo-Pic__ProgressText {
+  position: absolute;
+  font-family: "Poppins-Regular";
+  font-size: 3rem;
+  margin: 0rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ProfileInfo-Personal__Container,
+  .ProfileInfo-Account__Container {
+    width: 100%;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .ProfileInfo-Header {
+    margin-bottom: 1rem;
+  }
+  .ProfileInfo-Header__Title {
+    font-size: 1.5rem;
+  }
+  .ProfileInfo {
+    padding: 2rem 2rem;
+  }
+  .ProfileInfo-Digits {
+    margin: 0.5rem;
+  }
+
+  .ProfileInfo {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+  .ProfileInfo-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ProfileInfo-Pic__Label {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .ProfileInfo-Personal__Header {
+    text-align: center;
+    margin: 0;
+  }
+  .ProfileInfo-Pic__Container {
+    margin-top: 3rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .ProfileInfo-Radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem;
+    margin: 0;
+  }
+  .ProfileInfo-Radio__Label {
+    font-size: 1rem;
+    margin: 0rem 1rem;
+  }
+  .ProfileInfo-Personal__Header {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .ProfileInfo-Pic__ProgressText {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .ProfileInfo-Personal__Container {
+    width: 100%;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+  .ProfileInfo {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+  .ProfileInfo-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ProfileInfo-Pic__Label {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .ProfileInfo-Personal__Header {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .ProfileInfo-Pic__Container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-right: 0rem;
+  }
+  .ProfileInfo-Header {
+    margin-bottom: 1rem;
+  }
+  .ProfileInfo-Pic__ProgressText {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .ProfileInfo-Header {
+    margin-bottom: 4rem;
+  }
+
+  .ProfileInfo-Pic__Container {
+    margin-top: 0rem;
+    margin-right: 2rem;
+  }
+  .ProfileInfo-Personal__Header {
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+  }
+  .ProfileInfo-Form {
+    padding-left: 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .ProfileInfo-Input,
+  .ProfileInfo-Input__textArea {
+    border-radius: 30px;
+    border: none;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .ProfileInfo-Input__textArea {
+    border-radius: 20px;
+  }
+  .ProfileInfo-Agreement {
+    margin-bottom: 1.1rem;
+  }
+  .ProfileInfo-Agreement {
+    margin: 0 0 0 1rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+  .ProfileInfo-Radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    margin: 0;
+  }
+  .ProfileInfo-Radio__Label {
+    font-size: 0.8rem;
+    margin: 0rem 1rem;
+  }
+  .ProfileInfo-Radio__optionContainer {
+    display: flex;
+  }
+
+  .ProfileInfo-Radio__option {
+    font-family: "Poppins-Bold";
+    margin: 0rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 4rem;
+  }
+  .ProfileInfo-Radio__option p {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  .ProfileInfo-Agreement {
+    margin-top: 1.2rem;
+  }
+  .ProfileInfo-Agreement {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.6rem;
+  }
+  .ProfileInfo-Agreement__checkbox,
+  .ProfileInfo-Radio__button {
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 50px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .ProfileInfo-Radio {
+    padding: 0rem;
+  }
+  .ProfileInfo-Personal__Container {
+    padding: 0rem 4rem 0rem 1rem;
+  }
+
+  .ProfileInfo-CameraIcon {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+  }
+  .ProfileInfo-Pic__Container {
+    margin-top: 0rem;
+    margin-right: 2rem;
+  }
+
+  .ProfileInfo-Account__MobileInput {
+    border-radius: 30px !important;
+    border: none !important;
+    padding: 0.5rem 0.5rem 0.5rem 4rem !important;
+    margin: 1rem 0rem !important;
+    width: 100% !important;
+  }
+  .ProfileInfo-Account__MobileDropdown {
+    padding: 5px !important;
+    width: 10% !important;
+    outline: none !important;
+  }
+
+  .ProfileInfo-Account__MobileDropdown:focus {
+    outline: none !important;
+  }
+  .ProfileInfo-Account__Container {
+    padding-top: 1.5rem;
+  }
+  .ProfileInfo-Btns__Submit {
+    color: #fff;
+    font-family: "Poppins-Bold";
+    padding: 0.4rem 0.3rem;
+    border: none;
+    border-radius: 20px;
+    width: 12rem;
+    text-align: center;
+    background-color: gray;
+    border: 1px solid gray;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  .ProfileInfo-Btns {
+    display: flex;
+    justify-content: center;
+    margin: 2.8rem 0rem;
+    align: center;
+  }
+  .ProfileInfo-Body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .ProfileInfo-Pic__Label {
+    width: 15rem;
+    height: 15rem;
+  }
+  .ProfileInfo-Pic__ProgressText {
+    font-size: 2.8rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .ProfileInfo-Personal__Container {
+    width: 100%;
+    padding: 0rem 8rem 0rem 1rem;
+  }
+  .ProfileInfo-Input,
+  .ProfileInfo-Input__textArea {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .ProfileInfo-Account__MobileInput {
+    padding: 1rem 1rem 1rem 4rem !important;
+    width: 100% !important;
+  }
+
+  .ProfileInfo-Agreement {
+    font-size: 0.8rem;
+  }
+
+  .ProfileInfo-Radio__Label {
+    font-size: 0.9rem;
+  }
+  .ProfileInfo-Form {
+    padding-left: 0rem;
+  }
+  .ProfileInfo-Radio__option {
+    width: 5rem;
+  }
+  .ProfileInfo-Radio__option p {
+    font-size: 0.8rem;
+  }
+  .ProfileInfo-Btns__Submit {
+    padding: 0.4rem 0.4rem;
+    font-size: 0.9rem;
+  }
+  .ProfileInfo-Btns {
+    margin: 3rem 0rem;
+  }
+  .ProfileInfo-Pic__ProgressText {
+    font-size: 2.8rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .ProfileInfo-Pic__ProgressText {
+    font-size: 3rem;
+  }
+  .ProfileInfo-Input,
+  .ProfileInfo-Input__textArea {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .ProfileInfo-Agreement {
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+  }
+  .ProfileInfo-Pic__Label {
+    width: 20rem;
+    height: 20rem;
+  }
+  .ProfileInfo-Radio__Label {
+    font-size: 1rem;
+  }
+  .ProfileInfo-Radio__option p {
+    font-size: 0.9rem;
+  }
+  .ProfileInfo-Account__MobileInput {
+    border-radius: 30px !important;
+    border: none !important;
+    padding: 1.5rem 1rem 1.5rem 4rem !important;
+    margin: 1.2rem 0rem !important;
+    width: 100% !important;
+  }
+  .ProfileInfo-Btns {
+    margin: 4rem 0rem;
+  }
+  .ProfileInfo-Btns__Submit {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .ProfileInfo-Btns__Submit:hover {
+    background-color: rgb(211, 0, 214);
+    border: 1px solid rgb(211, 0, 214);
+  }
+}
+@keyframes float {
+  0% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+
+  50% {
+    background-position: right 110% top -8rem, left 100% top 0rem,
+      right 90% top 8rem, left 80% top 16rem;
+  }
+  100% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+}

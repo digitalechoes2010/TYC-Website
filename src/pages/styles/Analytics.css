@@ -1,0 +1,48 @@
+.Analytics {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem 8rem;
+}
+.Analytics-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.Analytics-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 577px) {
+  .Analytics {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .Analytics {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

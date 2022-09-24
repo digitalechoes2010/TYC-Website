@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../../assets/Fonts/Poppins-Medium.ttf);
+}
+.DashboardTabs {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+}
+
+.DashboardTabs-Social,
+.DashboardTabs-Business {
+  width: 50%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  cursor: pointer;
+}
+.DashboardTabs-Social__Solo,
+.DashboardTabs-Business__Solo {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  cursor: pointer;
+}
+.DashboardTabs-Social__Solo a,
+.DashboardTabs-Business__Solo a {
+  text-align: center;
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0 !important;
+  font-family: "Poppins-SemiBold";
+}
+.DashboardTabs-Business__Solo {
+  background-color: #000 !important;
+}
+.DashboardTabs-Business__Solo a {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.DashboardTabs-Business a,
+.DashboardTabs-Social a {
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0 !important;
+  font-family: "Poppins-SemiBold";
+}
+.DashboardTabs-Social a {
+  text-align: right;
+  padding-right: 7rem !important;
+}
+.DashboardTabs-Business a {
+  padding-left: 7rem;
+}
+.DashboardTabs-Social {
+  display: flex;
+  justify-content: flex-end;
+}
+.DashboardTabs-active,
+.DashboardTabs-inactive {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.DashboardTabs-active {
+  border-bottom: 2px solid #000 !important;
+}
+.DashboardTabs-active,
+.DashboardTabs-active a {
+  background-color: #8da2af !important;
+  color: #fff !important;
+}
+.DashboardTabs-inactive,
+.DashboardTabs-inactive a {
+  background-color: #000 !important;
+  color: gray !important;
+}
+.DashboardTabs-TabContent {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0rem 0rem;
+  width: 100% !important;
+}
+.DashboardTabs-TabContent .tab-pane,
+.DashboardTabs-TabContent .tab-pane .row {
+  width: 100% !important;
+  margin: 0 !important;
+  margin-top: -1px !important;
+}
+.DashboardTabs-AddButton,
+.DashboardTabs-MediaButton {
+  max-width: 180px;
+  min-width: 180px;
+  margin: 1rem;
+}
+.DashboardTabs-MediaButton {
+}
+.DashboardTabs-Business__Content {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: left !important;
+  background-color: #000;
+  padding: 3rem !important;
+}
+.DashboardTabs-Business__info {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.DashboardTabs-Business__EditButton {
+  width: 50px;
+  height: 50px;
+  align-self: self-end !important; 
+  background-color: #a200a5;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  .DashboardTabs-Business__EditButton {
+    width: 50px;
+    height: 50px;
+    align-self: self-end !important;
+    background-color: #a200a5;
+    border: none;
+    border-radius: 10px;
+    padding-top: auto !important;
+    transition: all 0.2s ease-in-out;
+    margin-top: auto;
+  }
+}}
+.DashboardTabs-Business__EditButton:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+  -webkit-box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+  -moz-box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+}
+.DashboardTabs-MediaSection {
+  
+}
+.DashboardTabs-ProfilesSection {
+ 
+}
+.DashboardTabs-MediaSection__Header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Poppins-SemiBold";
+}
+.DashboardTabs-SubTitles {
+  font-family: "Poppins-SemiBold";
+  margin-left:3rem;
+  margin-top:3rem
+ 
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 635px) {
+  .DashboardTabs-Social a {
+    padding-right: 3rem !important;
+  }
+  .DashboardTabs-Business a {
+    padding-left: 3rem;
+  }
+  .DashboardTabs-MediaSection__Header,
+  .DashboardTabs-SocialProfile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

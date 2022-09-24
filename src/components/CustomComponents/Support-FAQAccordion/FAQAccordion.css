@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../../../assets/Fonts/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../../assets/Fonts/Poppins-Medium.ttf);
+}
+
+.FAQAccordion {
+  margin: 2rem 0rem;
+}
+
+.FAQAccordion-Button {
+  background-color: transparent !important;
+  border: none !important;
+  color: rgb(211, 0, 214) !important;
+  font-family: "Poppins-Black" !important;
+  font-size: 2rem !important;
+  outline: none !important;
+  width: 100% !important;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2rem 0rem 0rem !important;
+}
+.FAQAccordion-Button:hover,
+.FAQAccordion-Button:focus,
+.FAQAccordion-Button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.FAQAccordion-plus {
+  height: 1rem;
+  width: 1rem;
+  font-size: 1em;
+  opacity: 0.7;
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+.FAQAccordion-plus .horizontal {
+  position: absolute;
+  background-color: rgb(211, 0, 214);
+  width: 30px;
+  height: 5px;
+  left: 50%;
+  margin-left: -15px;
+  top: 50%;
+  margin-top: -2.5px;
+}
+.FAQAccordion-plus .vertical {
+  position: absolute;
+  background-color: rgb(211, 0, 214);
+  width: 5px;
+  height: 30px;
+  left: 50%;
+  margin-left: -2.5px;
+  top: 50%;
+  margin-top: -15px;
+}
+.FAQAccordion-closed .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+}
+.FAQAccordion-closed .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+.FAQAccordion-opened {
+  opacity: 1;
+}
+.FAQAccordion-opened .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+}
+.FAQAccordion-opened .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.FAQAccordion-Card {
+  border: none !important;
+  box-shadow: 15px 15px 17px -1px rgba(211, 0, 214, 0.18);
+  -webkit-box-shadow: 15px 15px 17px -1px rgba(211, 0, 214, 0.18);
+  -moz-box-shadow: 15px 15px 17px -1px rgba(211, 0, 214, 0.18);
+}
+.FAQAccordion-CardBody {
+  font-family: "Poppins-Medium";
+}
+.FAQAccordion-CardBody li {
+  font-family: "Poppins-Medium";
+}
+.FAQAccordion-CardBody ol {
+}
+.FAQAccordion-CardBody img {
+  width: 100%;
+  border-radius: 5px;
+}
+.FAQAccordion-Button p {
+  margin: 0rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .FAQAccordion-Button {
+    font-size: 1rem !important;
+  }
+  .FAQAccordion-plus .horizontal {
+    position: absolute;
+    background-color: rgb(211, 0, 214);
+    width: 15px;
+    height: 2.5px;
+    left: 50%;
+    margin-left: -7.5px;
+    top: 50%;
+    margin-top: -1.25px;
+  }
+  .FAQAccordion-plus .vertical {
+    position: absolute;
+    background-color: rgb(211, 0, 214);
+    width: 2.5px;
+    height: 15px;
+    left: 50%;
+    margin-left: -1.25px;
+    top: 50%;
+    margin-top: -7.5px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

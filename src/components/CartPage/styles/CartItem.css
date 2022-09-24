@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../assets/Fonts/Poppins-Regular.ttf);
+}
+.Cart-Item__img {
+  width: auto;
+  max-height: 175px;
+}
+.Cart-Item__info {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.Cart-Item__info h4 {
+  font-size: 1rem;
+  font-family: "Poppins-SemiBold";
+}
+.Cart-Item__info h3 {
+  margin-top: 1.2rem;
+  font-size: 1.8rem;
+  font-family: "Poppins-SemiBold";
+  margin-bottom: auto;
+}
+.Cart-Item__price,
+.Cart-Item__Sub,
+.Cart-Item__Order {
+  color: rgb(126, 126, 126);
+  font-size: 1.5rem;
+  font-family: "Poppins-Regular";
+  display: flex;
+  align-self: center;
+}
+.Cart-Item__price h3 {
+  margin: 0rem;
+}
+
+.Cart-Item__Order Input {
+  max-width: 5rem;
+}
+.Cart-Item__Order .Cart-Item__mobileHeader,
+.Cart-Item__price .Cart-Item__mobileHeader,
+.Cart-Item__Sub .Cart-Item__mobileHeader {
+  display: none;
+}
+.Cart-Trash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Cart-Trash_hide {
+  display: none;
+}
+.Cart-Trash_show {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.Cart-Trash_icon {
+  fill: red;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Cart-Item__info h3 {
+    margin-top: 0rem;
+  }
+  .Cart-Item__price p,
+  .Cart-Item__Sub p {
+    margin: 0rem;
+  }
+  .Cart-Item__price {
+    margin-top: 1.5rem;
+  }
+  .Cart-Item__Order .Cart-Item__mobileHeader,
+  .Cart-Item__price .Cart-Item__mobileHeader,
+  .Cart-Item__Sub .Cart-Item__mobileHeader {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font: 1.2rem;
+  }
+  .Cart-Item__Order,
+  .Cart-Item__price,
+  .Cart-Item__Sub {
+    width: 100%;
+  }
+  .Cart-Item__Order div,
+  .Cart-Item__price div,
+  .Cart-Item__Sub div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Cart-Item__Order div,
+  .Cart-Item__price div,
+  .Cart-Item__Sub div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .Cart-Item__Order .Cart-Item__mobileHeader,
+  .Cart-Item__price .Cart-Item__mobileHeader,
+  .Cart-Item__Sub .Cart-Item__mobileHeader {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font: 1.2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Cart-Item__img {
+    width: 100%;
+    max-height: 175px;
+  }
+  .Cart-Item__info {
+    padding-top: 0.8rem;
+  }
+  .Cart-Item__info h4 {
+    font-size: 0.5rem;
+    font-family: "Poppins-SemiBold";
+  }
+  .Cart-Item__info h3 {
+    margin-top: 0rem;
+    font-size: 0.9rem;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: auto;
+  }
+  .Cart-Item__price,
+  .Cart-Item__Sub {
+    color: rgb(126, 126, 126);
+    font-size: 1.2rem;
+    font-family: "Poppins-Regular";
+    display: flex;
+    align-self: center;
+  }
+  .Cart-Item__price p,
+  .Cart-Item__Sub p {
+    margin: 0rem;
+  }
+  .Cart-Item__Order .Cart-Item__mobileHeader,
+  .Cart-Item__price .Cart-Item__mobileHeader,
+  .Cart-Item__Sub .Cart-Item__mobileHeader {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Cart-Item__img {
+    width: auto;
+    max-height: 175px;
+  }
+  .Cart-Item__info h4 {
+    font-size: 12px;
+    font-family: "Poppins-SemiBold";
+    margin-top: 1rem;
+  }
+  .Cart-Item__info h3 {
+    margin-top: 1rem;
+    font-size: 22.9px;
+    font-family: "Poppins-SemiBold";
+  }
+  .Cart-Item__price,
+  .Cart-Item__Sub {
+    color: rgb(126, 126, 126);
+    font-size: 19.1px;
+    font-family: "Poppins-Regular";
+    display: flex;
+    align-self: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

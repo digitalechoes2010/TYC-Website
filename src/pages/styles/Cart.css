@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Medula One";
+    src: url(../../assets/Fonts/MedulaOne-Regular.ttf);
+}
+
+.Cart-Container {
+    padding: 5rem 5rem 5rem 8rem;
+}
+
+.Cart-Update {
+    margin-top: 2rem;
+    background-color: #000;
+    color: #fff;
+    font-family: "Medula One";
+    border: none;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 17.1px;
+}
+
+.Cart-Update:hover,
+.Cart-Update:active {
+    background-color: rgb(100, 100, 100);
+}
+
+.Coupon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.Coupon-Btn {
+    width: 25%;
+    min-width: 121.6px;
+    border: none;
+    padding: 0.5rem 1rem;
+    background: rgb(255, 97, 0);
+    background: linear-gradient(
+            0deg,
+            rgba(255, 97, 0, 1) 0%,
+            rgba(255, 145, 0, 1) 47%,
+            rgba(253, 255, 161, 1) 100%
+    );
+    color: #fff;
+    font-family: "Medula One";
+    font-size: 17.1px;
+}
+
+.Coupon-Btn__Col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+}
+
+.Coupon-Btn:hover,
+.Coupon-Btn:active {
+    background: rgb(213, 67, 0);
+    background: linear-gradient(
+            0deg,
+            rgba(213, 67, 0, 1) 0%,
+            rgba(210, 123, 0, 1) 47%,
+            rgba(206, 208, 132, 1) 100%
+    );
+}
+
+.Coupon-Btn:active,
+.Cart-Update:active {
+    transform: scale(0.9);
+}
+
+.Coupon-Input {
+    border: none;
+    width: 70%;
+    outline: none;
+    font-size: 17.1px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Cart-Container {
+        padding: 2rem 2rem 2rem 3rem;
+    }
+
+    .CartList-Headers__Price,
+    .CartList-Headers__Quantity,
+    .CartList-Headers__Subtotal {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .CartList-Headers__Price,
+    .CartList-Headers__Quantity,
+    .CartList-Headers__Subtotal {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .CartList-Headers__Price,
+    .CartList-Headers__Quantity,
+    .CartList-Headers__Subtotal {
+        display: block;
+    }
+
+    .Cart-Container {
+        padding: 3rem 3rem 3rem 5rem;
+    }
+
+    .CartList-Headers h3 {
+        font-size: 1rem;
+    }
+
+    .CartList-Headers__Price {
+        text-align: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Cart-Container {
+        padding: 5rem 5rem 5rem 8rem;
+    }
+
+    .CartList-Headers h3,
+    .CartList-Headers__Price {
+        text-align: left;
+    }
+
+    .CartList-Headers h3 {
+        font-size: 22.9px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

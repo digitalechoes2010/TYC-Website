@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/Fonts/Poppins-Medium.ttf);
+}
+.AnalyticsTabs {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+}
+
+.AnalyticsTabs-Social,
+.AnalyticsTabs-Business {
+  width: 50%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  cursor: pointer;
+}
+.AnalyticsTabs-Social__Solo,
+.AnalyticsTabs-Business__Solo {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 2rem !important;
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  cursor: pointer;
+}
+.AnalyticsTabs-Social__Solo a,
+.AnalyticsTabs-Business__Solo a {
+  text-align: center;
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0 !important;
+  font-family: "Poppins-SemiBold";
+}
+.AnalyticsTabs-Business__Solo {
+  background-color: #000 !important;
+}
+.AnalyticsTabs-Business__Solo a {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.AnalyticsTabs-Business a,
+.AnalyticsTabs-Social a {
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #000 !important;
+  margin: 0 !important;
+  font-family: "Poppins-SemiBold";
+}
+.AnalyticsTabs-Social a {
+  text-align: right;
+  padding-right: 7rem !important;
+}
+.AnalyticsTabs-Business a {
+  padding-left: 7rem;
+}
+.AnalyticsTabs-Social {
+  display: flex;
+  justify-content: flex-end;
+}
+.AnalyticsTabs-active,
+.AnalyticsTabs-inactive {
+  border: none !important;
+  border-radius: 0 !important;
+}
+.AnalyticsTabs-active {
+  border-bottom: 2px solid #000 !important;
+}
+.AnalyticsTabs-active,
+.AnalyticsTabs-active a {
+  background-color: #8da2af !important;
+  color: #fff !important;
+}
+.AnalyticsTabs-inactive,
+.AnalyticsTabs-inactive a {
+  background-color: #000 !important;
+  color: gray !important;
+}
+.AnalyticsTabs-TabContent {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0rem 0rem;
+  width: 100% !important;
+}
+.AnalyticsTabs-TabContent .tab-pane,
+.AnalyticsTabs-TabContent .tab-pane .row {
+  width: 100% !important;
+  margin: 0 !important;
+  margin-top: -1px !important;
+}
+.AnalyticsTabs-SocialProfile {
+  padding: 3rem !important;
+}
+.AnalyticsTabs-Graph__Title,
+.AnalyticsTabs-Graph__SubTitle {
+  text-align: center;
+}
+.AnalyticsTabs-TopApps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AnalyticsTabs-TopApps__Header {
+  margin-top: 2rem;
+}
+.AnalyticsTabs-TopApps__SubTitle {
+  margin-bottom: 2rem;
+}
+.AnalyticsTabs-TopApps__Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .AnalyticsTabs-Social a {
+    padding-right: 3rem !important;
+  }
+  .AnalyticsTabs-Business a {
+    padding-left: 3rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .AnalyticsTabs-TopApps__SubTitle {
+    margin-bottom: 6rem;
+  }
+  .AnalyticsTabs-TopApps__Header {
+    margin-top: 0rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,96 @@
+.ProfilePickerModal-toggle {
+  font-family: "Poppins-SemiBold" !important;
+  padding: 0.5rem 0.5rem !important;
+  border: none !important;
+  border-radius: 20px !important;
+  width: 10rem !important;
+  text-align: center !important;
+  transition: 0.2s !important;
+  cursor: pointer !important;
+  margin-top: 1rem !important;
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+  box-shadow: none !important;
+}
+
+.ProfilePickerModal-toggle__social {
+  border: 1px solid #a200a5 !important;
+}
+.ProfilePickerModal-toggle__business {
+  border: 1px solid #ff9100 !important;
+}
+.ProfilePickerModal-toggle__both {
+  border: 1px solid #000 !important;
+}
+
+.ProfilePickerModal-ModalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ProfilePickerModal-Btns {
+  font-family: "Poppins-SemiBold" !important;
+  padding: 0.5rem 0.5rem !important;
+  border: none !important;
+  border-radius: 20px !important;
+  width: 10rem !important;
+  text-align: center !important;
+  transition: 0.2s !important;
+  cursor: pointer !important;
+  margin-top: 1rem !important;
+  box-shadow: none !important;
+}
+.ProfilePickerModal-Social {
+  background-color: #a200a5 !important;
+}
+.ProfilePickerModal-Business {
+  background-color: #ff9100 !important;
+}
+.ProfilePickerModal-Both {
+  background-color: #628092 !important;
+}
+.ProfilePickerModal-Confirm {
+  font-family: "Poppins-SemiBold" !important;
+  padding: 0.5rem 0.5rem !important;
+  border: none !important;
+  border-radius: 20px !important;
+  width: 8rem !important;
+  text-align: center !important;
+  transition: 0.2s !important;
+  cursor: pointer !important;
+
+  box-shadow: none !important;
+}
+
+.ProfilePickerModal-toggle__Both {
+  border: 1px solid #fff !important;
+}
+.ProfilePickerModal-toggle__Business {
+  border: 1px solid #ff9100 !important;
+}
+.ProfilePickerModal-toggle__Social {
+  border: 1px solid #a200a5 !important;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ProfilePickerModal-toggle {
+    width: 7.5rem !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

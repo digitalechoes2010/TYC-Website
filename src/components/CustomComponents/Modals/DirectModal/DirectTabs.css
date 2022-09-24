@@ -1,0 +1,36 @@
+.DirectTabs {
+  border: none !important;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.DirectTabs-Social,
+.DirectTabs-Business {
+  width: 40% !important;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.DirectTabs-Business__link,
+.DirectTabs-Social__link {
+  border: none !important;
+  width: 80% !important;
+  text-align: center;
+}
+
+.DirectTabs-Social__link,
+.DirectTabs-Business__link {
+  color: #fff !important;
+  font-family: "Poppins-SemiBold" !important;
+  border-radius: 20px !important;
+}
+.DirectTabs-Social__link {
+  background-color: #a200a5 !important;
+}
+.DirectTabs-Business__link {
+  background-color: #ff9100 !important;
+}
+.DirectTabs-linkOff {
+  background-color: #8da2af !important;
+}

@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../assets/Fonts/Poppins-Light.ttf);
+}
+.Footer-Container {
+  background-color: #000;
+  height: auto;
+  font-family: "Poppins-Light";
+  margin: 0rem;
+  padding: 8rem 0rem 10rem;
+  position: relative;
+}
+
+.Footer-Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.Footer-Logo {
+  width: 5rem;
+  margin-top: 4rem;
+}
+.Footer-Contributions {
+  position: absolute;
+  color: #fff;
+  bottom: 60px;
+  left: 50%;
+  font-size: 11px;
+}
+.Footer-Contributions p {
+  margin: 0rem;
+}
+.Footer-DELogo {
+  width: 25px;
+  font-family: "Poppins-Medium";
+}
+.Footer-Address,
+.Footer-Address a {
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 12.2px;
+  text-decoration: none;
+}
+.Footer-Address a {
+  cursor: pointer;
+}
+.Footer-Address a:hover {
+  text-decoration: underline;
+}
+.Footer-Address p {
+  margin: 0rem;
+  line-height: 2;
+}
+.Footer-Title {
+  padding-top: 2rem;
+}
+.Footer-QuickLinks {
+  font-family: "Poppins-Bold";
+  font-size: 20.9px;
+  color: #fff;
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer-Download {
+  font-family: "Poppins-Bold";
+  font-size: 20.9px;
+  color: #fff;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+.Footer-Link__Container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  font-family: "Poppins-Light";
+  line-height: 2;
+}
+.Footer-Link__List {
+  list-style-type: none;
+  padding: 0rem;
+  font-size: 12.2px;
+  width: 10rem;
+}
+
+.Footer-Link__Item {
+  color: #fff;
+  cursor: pointer;
+}
+.Footer-Link__Item:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.Footer-Store__Links {
+  display: flex;
+  flex-direction: row;
+  height: 7rem;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  width: 120px;
+}
+
+.Footer-Store__Btns {
+  background-color: #fff;
+  border: 1.5px solid gray;
+  border-radius: 10px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer-Store__Btns .Google {
+  width: 0.9rem;
+}
+
+.Footer-Store__Btns .Apple {
+  width: 1.1rem;
+}
+
+.Footer-Store__Btns:hover {
+  background: rgb(254, 254, 254);
+  background: linear-gradient(
+    354deg,
+    rgba(254, 254, 254, 1) 0%,
+    rgba(235, 235, 235, 1) 29%,
+    rgba(231, 231, 231, 1) 57%,
+    rgba(212, 212, 212, 1) 100%,
+    rgba(187, 187, 187, 1) 100%
+  );
+}
+.Footer-SocialMedia__Link:hover svg {
+  fill: rgb(204, 0, 204);
+}
+.Footer-DownloadDisplay {
+  display: none;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 731px) {
+  .Footer-Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Footer-QuickLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Footer-Title {
+    padding: 0rem;
+  }
+
+  .Footer-Download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0rem;
+  }
+  .Footer-Store__Links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 125.04px;
+  }
+  .Footer-Link__Item {
+    padding: 0rem;
+  }
+  .Footer-Link__List {
+    padding-left: 3rem;
+  }
+  .Footer-SocialMedia,
+  .Footer-SocialMedia__Container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .Footer-Contributions {
+    position: absolute;
+    color: #fff;
+    bottom: 60px;
+    left: 46%;
+    font-size: 11px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Footer-Link__Item {
+    padding: 0rem;
+  }
+  .Footer-SocialMedia,
+  .Footer-SocialMedia__Container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Footer-SocialMedia,
+  .Footer-SocialMedia__Container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .Footer-SocialMedia__Container {
+    margin-left: 8rem;
+  }
+}

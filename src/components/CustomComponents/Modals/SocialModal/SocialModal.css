@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.SocialModal {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+.SocialModal-AddButton {
+  border-radius: 20px;
+  width: 8rem;
+  height: 8rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins-Medium";
+  transition: 1s;
+  transform-origin: center;
+  margin: 2rem;
+}
+.SocialModal-AddButton__name {
+  margin-top: 5px;
+  text-align: center;
+}
+.SocialModal-AddButton:hover {
+  transform: scale(1.07);
+}
+
+.SocialModal-ModalContent {
+  background-color: rgb(245, 245, 245) !important;
+  border: none !important;
+  font-family: "Poppins-SemiBold" !important;
+}
+.SocialModal-ModalContent__Logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.SocialModal-CancelButton {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+
+.SocialModal-CancelButton:hover {
+  background-color: #5f666d;
+}
+.SocialModal-ModalBody {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.SocialModal-ProfileButton {
+  width: 100px;
+  height: 100px;
+
+  font-family: "Poppins-Regular";
+  border-radius: 10px;
+  border: none;
+  margin: 1rem;
+}
+.SocialModal-ProfileButton:hover {
+  transform: scale(1.05);
+}
+
+.SocialModal-ModalBody__Groups {
+  max-height: 70vh;
+  overflow: scroll;
+}
+.SocialModal-Modal__ButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SocialModal-Modal__ButtonContainer p {
+  margin: 0px;
+  margin-top: -15px;
+}
+.SocialModal-ProfileButton__SocialLogo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.SocialModal-Input {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+}
+
+.SocialModal-ModalContent {
+  background-color: rgb(245, 245, 245) !important;
+  border: none !important;
+  font-family: "Poppins-SemiBold" !important;
+}
+
+.SocialModal-SubmitButton {
+  background-color: rgb(211, 0, 214);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+  width: 100%;
+}
+.SocialModal-CancelButton {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+.SocialModal-SubmitButton:hover {
+  background-color: rgb(197, 0, 201);
+  border: none;
+}
+.SocialModal-CancelButton:hover {
+  background-color: #5f666d;
+}
+
+.SocialModal-CardBody__Buttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.SocialModal-OpenButton,
+.SocialModal-DeleteButton {
+  background-color: #8da2af;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 45%;
+}
+
+.SocialModal-isDirect {
+  border: 2px solid rgba(255, 145, 0, 1);
+}
+.SocialModal-DirectText {
+  background-color: rgba(255, 145, 0, 1);
+  font-family: "Poppins-Regular";
+  color: white;
+  position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1px 10px 2px;
+}

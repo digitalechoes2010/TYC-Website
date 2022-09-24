@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../assets/Fonts/Poppins-Regular.ttf);
+}
+.Tabs-Headers {
+  color: #000;
+  font-family: "Poppins-SemiBold";
+  font-size: 22.98px;
+}
+.Tabs-Headers:hover {
+  color: #495057;
+  border: none;
+  border-color: black;
+  cursor: pointer;
+}
+
+.NavItem .Tabs-Headers .active,
+.product-Tabs .Tabs-Headers.active {
+  color: #495057 !important;
+  background-color: #fff !important ;
+  border: none !important;
+  border-bottom: 2px solid black !important;
+  border-color: black !important;
+}
+
+.card,
+.Tabs-description,
+.Tabs-info {
+  margin-top: 1rem;
+}
+
+.Tabs-info,
+.Tabs-description,
+.Tabs-Reviews {
+  font-family: "Poppins-Bold";
+  font-size: 12.85px;
+}
+
+.Tabs-Cards__Text {
+  font-family: "Poppins-Regular";
+}

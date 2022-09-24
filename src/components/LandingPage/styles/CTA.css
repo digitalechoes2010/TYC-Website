@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+
+/*CTA*/
+.CTA {
+  display: flex;
+}
+
+.CTA-Text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.CTA-Text h2 {
+  width: 100%;
+  font-family: "Poppins-SemiBold";
+  font-size: 40px;
+  line-height: 3.5rem;
+}
+
+.CTA-Image {
+  width: 100%;
+}
+
+.CTA-Image img {
+  width: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .CTA {
+    margin-top: 6rem;
+  }
+  .CTA-Text {
+    text-align: center;
+  }
+  .CTA-Text h2 {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .CTA {
+    margin-top: 7rem;
+  }
+  .CTA-Text h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .CTA {
+    margin-top: 7rem;
+  }
+  .CTA-Text h2 {
+    text-align: left;
+    line-height: 2.5rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .CTA {
+    margin-top: 2rem;
+    line-height: 3.5rem;
+  }
+  .CTA-Text h2 {
+    font-size: 40px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

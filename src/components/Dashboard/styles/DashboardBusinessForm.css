@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.DashboardBusinessForm {
+  background-color: rgb(245, 245, 245);
+  margin-top: 2rem;
+  background: transparent;
+}
+
+.DashboardBusinessForm-Form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.DashboardBusinessForm-Input {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+  width: 100%;
+}
+.DashboardBusinessForm__MobileInput {
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 1.5rem 1.5rem 1.5rem 4rem !important;
+  margin: 16px 0px !important;
+  width: 100% !important;
+  height: 35.6px !important;
+}
+.DashboardBusinessForm__MobileDropdown {
+  padding: 5px !important;
+  width: 10% !important;
+  outline: none !important;
+}
+
+.DashboardBusinessForm__MobileDropdown:focus {
+  outline: none !important;
+}
+
+.DashboardBusinessForm-Btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.DashboardBusinessForm-Btns__Submit {
+  width: 50%;
+  height: 40px;
+  align-self: self-end !important;
+  background-color: #a200a5;
+  border: none;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-top: 2rem;
+  color: #fff;
+  font-family: "Poppins-SemiBold";
+}
+
+.DashboardBusinessForm-Btns__Submit:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 26px 0px rgba(162, 0, 165, 0.75);
+  -webkit-box-shadow: 0px 6px 26px 0px rgba(162, 0, 165, 0.75);
+  -moz-box-shadow: 0px 6px 26px 0px rgba(162, 0, 165, 0.75);
+}
+.DashboardBusinessForm__Close {
+  width: 30px;
+  height: 30px;
+  background-color: #a200a5;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-left: auto;
+}
+.DashboardBusinessForm__Close:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+  -webkit-box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+  -moz-box-shadow: -1px 1px 42px 16px rgba(162, 0, 165, 0.57);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .DashboardBusinessForm {
+    padding: 2rem 2rem;
+  }
+
+  .DashboardBusinessForm-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .DashboardBusinessForm {
+    margin-top: 0rem;
+  }
+  .DashboardBusinessForm-Btns__Submit {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .DashboardBusinessForm-Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .DashboardBusinessForm-Form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .DashboardBusinessForm-Input {
+    border-radius: 30px;
+    border: none;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .DashboardBusinessForm__MobileInput {
+    border-radius: 30px !important;
+    border: none !important;
+    padding: 0.5rem 0.5rem 0.5rem 4rem !important;
+    margin: 1rem 0rem !important;
+    width: 100% !important;
+  }
+  .DashboardBusinessForm__MobileDropdown {
+    padding: 5px !important;
+    width: 10% !important;
+    outline: none !important;
+  }
+
+  .DashboardBusinessForm__MobileDropdown:focus {
+    outline: none !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .DashboardBusinessForm-Input {
+    font-size: 0.9rem;
+  }
+  .DashboardBusinessForm__MobileInput {
+    padding: 1rem 1rem 1rem 4rem !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .DashboardBusinessForm-Input {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .DashboardBusinessForm__MobileInput {
+    border-radius: 30px !important;
+    border: none !important;
+    padding: 1.5rem 1rem 1.5rem 4rem !important;
+    margin: 1rem 0rem !important;
+    width: 100% !important;
+  }
+}

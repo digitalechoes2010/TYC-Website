@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Medula One";
+  src: url(../../../assets/Fonts/MedulaOne-Regular.ttf);
+}
+
+.Product-Carousel__Container {
+  margin: 10rem 0rem;
+  height: 22rem;
+}
+.Product-Arrow {
+  background: transparent;
+  border: none;
+}
+.Product-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rem;
+  font-family: "Poppins-SemiBold";
+}
+.Product-header h2 {
+  font-size: 40px;
+}
+.Product-smallTextHeader {
+  font-size: 8px;
+  font-family: "Poppins-SemiBold";
+}
+.Product-Carousel__Img {
+  height: 233px;
+}
+.Product-Carousel {
+  height: auto;
+  margin: 0rem 1rem 0rem;
+  width:fit-content !important;
+}
+
+.Product-Carousel__Text h3 {
+  color: #000;
+  
+  font-family: "Medula One";
+  font-size: 25.7px;
+}
+
+.Product-Carousel__Text {
+  text-align: center
+}
+.Product-Carousel__Card {
+  margin: 0rem 0.5rem;
+}
+.Product-Carousel__Card img {
+
+  height: 200px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Product-Carousel__Container {
+    margin: 8rem 0rem 5rem;
+  }
+  .Product-header h2 {
+    width: 255px;
+    font-size: 1.5em;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Product-Carousel__Container {
+    margin: 6rem 0rem 3rem;
+  }
+  .Product-header h2 {
+    font-size: 2em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Product-Carousel__Container {
+    margin: 10rem 0rem 3rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Product-header h2 {
+    font-size: 40px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

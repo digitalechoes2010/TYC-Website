@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.ConfirmOTP {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem;
+}
+.ConfirmOTP-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ConfirmOTP-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+
+.ConfirmOTP-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ConfirmOTP-Btns {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+.ConfirmOTP-Btns__Submit {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+  background-color: #a200a5;
+  border: 1px solid #a200a5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.ConfirmOTP-Btns__Submit:hover {
+  background-color: rgb(162, 0, 165);
+  border: 1px solid #a200a5;
+}
+.ConfirmOTP-Btns__disabled,
+.ConfirmOTP-Btns__disabled:hover {
+  background-color: #8da2af;
+  border: 1px solid #8da2af;
+  cursor: default;
+}
+.ConfirmOTP-Form__Header {
+  text-align: center;
+  margin-top: 3rem;
+}
+.ConfirmOTP-Digits_Container {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.ConfirmOTP-Digits {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  margin: 0rem;
+}
+
+.circle-container {
+  position: relative;
+  width: 20em;
+  height: 20em;
+  padding: 0em;
+  border-radius: 50%;
+  margin: 0em auto 0;
+}
+.deg0,
+.deg30,
+.deg60,
+.deg90,
+.deg120,
+.deg150,
+.deg180,
+.deg210,
+.deg240,
+.deg270,
+.deg300,
+.deg330 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8em;
+  height: 8em;
+  margin: -0.5em;
+}
+.deg0 {
+  transform: translate(4em);
+}
+.deg30 {
+  transform: rotate(30deg) translate(4em) rotate(-30deg);
+}
+.deg60 {
+  transform: rotate(60deg) translate(4em) rotate(-60deg);
+}
+.deg90 {
+  transform: rotate(90deg) translate(4em) rotate(-90deg);
+}
+.deg120 {
+  transform: rotate(120deg) translate(4em) rotate(-120deg);
+}
+.deg150 {
+  transform: rotate(150deg) translate(4em) rotate(-150deg);
+}
+.deg180 {
+  transform: translate(-4em);
+}
+.deg210 {
+  transform: rotate(210deg) translate(4em) rotate(-210deg);
+}
+.deg240 {
+  transform: rotate(240deg) translate(4em) rotate(-240deg);
+}
+.deg270 {
+  transform: rotate(270deg) translate(4em) rotate(-270deg);
+}
+.deg300 {
+  transform: rotate(300deg) translate(4em) rotate(-300deg);
+}
+.deg330 {
+  transform: rotate(330deg) translate(4em) rotate(-330deg);
+}
+
+.animate-stars.deg270 {
+  animation: stars 0.1s ease-in 0.1s forwards;
+}
+.animate-stars.deg300 {
+  animation: stars 0.1s ease-in 0.2s forwards;
+}
+.animate-stars.deg330 {
+  animation: stars 0.1s ease-in 0.3s forwards;
+}
+.animate-stars.deg0 {
+  animation: stars 0.1s ease-in 0.4s forwards;
+}
+.animate-stars.deg30 {
+  animation: stars 0.1s ease-in 0.5s forwards;
+}
+.animate-stars.deg60 {
+  animation: stars 0.1s ease-in 0.6s forwards;
+}
+.animate-stars.deg90 {
+  animation: stars 0.1s ease-in 0.7s forwards;
+}
+.animate-stars.deg120 {
+  animation: stars 0.1s ease-in 0.8s forwards;
+}
+.animate-stars.deg150 {
+  animation: stars 0.1s ease-in 0.9s forwards;
+}
+.animate-stars.deg180 {
+  animation: stars 0.1s ease-in 1s forwards;
+}
+.animate-stars.deg210 {
+  animation: stars 0.1s ease-in 1.1s forwards;
+}
+.animate-stars.deg240 {
+  animation: stars 0.1s ease-in 1.2s forwards;
+}
+
+@keyframes stars {
+  100% {
+    color: #a200a5;
+  }
+}
+
+.ConfirmOTP-checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #a200a5;
+  fill: none;
+  animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0s forwards;
+}
+
+.ConfirmOTP-checkmark {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #a200a5;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #fff;
+}
+
+.ConfirmOTP-checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0s forwards;
+}
+.ConfirmOTP-Checmark__Container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -40px;
+  width: 100px;
+  height: 50px;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ConfirmOTP-Header__Title {
+    font-size: 1.5rem;
+  }
+  .ConfirmOTP {
+    padding: 2rem 2rem;
+  }
+  .ConfirmOTP-Digits {
+    margin: 0.5rem;
+  }
+  .ConfirmOTP {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .ConfirmOTP {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+@keyframes float {
+  0% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+
+  50% {
+    background-position: right 110% top -8rem, left 100% top 0rem,
+      right 90% top 8rem, left 80% top 16rem;
+  }
+  100% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+}

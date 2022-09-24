@@ -1,0 +1,43 @@
+.PageNotFound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.PageNotFound-container h2 {
+  font-family: "Poppins-SemiBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .PageNotFound-container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .PageNotFound-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .PageNotFound-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .PageNotFound-container h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

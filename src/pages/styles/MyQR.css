@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.MyQR {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem;
+}
+.MyQR-Header,
+.MyQR-QR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.MyQR-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+
+.MyQR-QR {
+  margin: 2rem 2rem 2rem 0rem;
+}

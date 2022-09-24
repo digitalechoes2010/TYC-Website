@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(../../assets/Fonts/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../../assets/Fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../../assets/Fonts/Poppins-Medium.ttf);
+}
+.Support {
+  padding: 4rem 2rem;
+}
+.Support-innerAccordion {
+  font-size: 1rem !important;
+  font-family: "Poppins-Medium" !important;
+}
+.Support-innerAccordion__Card {
+  box-shadow: none !important;
+}
+.Support-innerAccordion__CardBody {
+  background-color: rgb(250, 250, 250) !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 145, 0, 1);
+  border-radius: 5px;
+}
+.Support-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins-Black";
+}
+.Support-Header p {
+  margin: 0;
+  font-family: "Poppins-Light";
+}
+.Support-Header p span {
+  color: rgb(211, 0, 214);
+}
+.Support-TutorialSection {
+  margin-top: 4rem;
+}
+.Support-VideoTutorial {
+  margin: 0;
+  height: 280px;
+  padding: 0.5rem;
+}
+.Support-VideoTutorial p {
+  margin: 0.3rem 0rem;
+  font-family: "Poppins-Light";
+}
+
+.Support-FAQ {
+  margin: 3rem 0rem 4rem;
+}
+.Support span {
+  color: rgb(211, 0, 214);
+  margin: 0rem;
+}
+
+.Support-Link {
+  color: rgb(211, 0, 214);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Support-innerAccordion__CardBody ol,
+  .Support-innerAccordion__CardBody ul {
+    padding: 1rem;
+  }
+  .Support-innerAccordion__CardBody {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  .Support-innerAccordion {
+    font-size: 0.8rem !important;
+    padding-right: 0rem !important;
+  }
+  .Support-innerAccordion p {
+    padding-right: 1rem;
+  }
+  .Support-VideoTutorial {
+    padding: 0.5rem 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Support-innerAccordion p {
+    padding-right: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,58 @@
+.cartCheckout-Title {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+.cartCheckout-Totals__Subtotal,
+.cartCheckout-Totals__Total {
+  color: rgb(126, 126, 126);
+  font-size: 1.5rem;
+  font-family: "Poppins-Regular";
+}
+
+.cartCheckout-Btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #000;
+  color: #fff;
+  font-family: "Medula One";
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+.cartCheckout-Btn:hover,
+.cartCheckout-Btn:active {
+  background-color: rgb(100, 100, 100);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cartCheckout-Title h3 {
+    font-size: 25.7px;
+  }
+  .cartCheckout-Title__Total,
+  .cartCheckout-Title__Subtotal {
+    font-size: 22.9px;
+  }
+  .cartCheckout-Totals__Subtotal,
+  .cartCheckout-Totals__Total {
+    font-size: 19.1px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

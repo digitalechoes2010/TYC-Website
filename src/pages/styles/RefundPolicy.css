@@ -1,0 +1,69 @@
+.RefundPolicy {
+  padding: 8rem;
+}
+.RefundPolicy h1 {
+  font-family: "Poppins-Bold";
+  margin-bottom: 4rem;
+}
+.RefundPolicy-Title {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+  padding-left: 0.5rem;
+}
+
+.RefundPolicy-text {
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+}
+.RefundPolicy span {
+  margin: 0rem;
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .RefundPolicy {
+    padding: 8rem 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .RefundPolicy {
+    padding: 8rem 4rem;
+  }
+
+  .RefundPolicy-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .RefundPolicy-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .RefundPolicy {
+    padding: 8rem;
+  }
+
+  .RefundPolicy-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .RefundPolicy-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

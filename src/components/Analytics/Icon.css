@@ -1,0 +1,29 @@
+.Icon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: center;
+}
+.Icon-Logo {
+  width: 6rem;
+  margin: 1rem;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.Icon-count {
+  position: absolute;
+  background-color: #c43a31;
+  color: #fff;
+  font-family: "Poppins-Medium";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  width: 2rem;
+  height: 2rem;
+  top: -8px;
+  right: -9px;
+}

@@ -1,0 +1,69 @@
+.CompatibleDevices {
+  padding: 8rem;
+}
+.CompatibleDevices h1 {
+  font-family: "Poppins-Bold";
+  margin-bottom: 4rem;
+}
+.CompatibleDevices-Title {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+  padding-left: 0.5rem;
+}
+
+.CompatibleDevices-text {
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+}
+.CompatibleDevices span {
+  margin: 0rem;
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .CompatibleDevices {
+    padding: 8rem 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .CompatibleDevices {
+    padding: 8rem 4rem;
+  }
+
+  .CompatibleDevices-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .CompatibleDevices-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .CompatibleDevices {
+    padding: 8rem;
+  }
+
+  .CompatibleDevices-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .CompatibleDevices-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

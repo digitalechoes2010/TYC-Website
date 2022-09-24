@@ -1,0 +1,32 @@
+.DirectItem {
+  width: 95%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 0rem 0rem 0.5rem;
+  height: 4rem;
+  transition: transform 1s;
+}
+.DirectItem:hover {
+  transform: scale(1.05);
+}
+.DirectItem-Icon,
+.DirectItem-name {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins-Medium";
+}
+.DirectItem-name:active{
+  color:#000;
+}
+.DirectItem-Icon {
+  padding-left: 4rem;
+}
+.DirectItem-isDirect {
+  border: 2px solid #ff9100;
+  border-radius: 20px;
+}
+.DirectItem:focus {
+  border: 2px solid rgba(255, 145, 0, 1);
+  border-radius: 20px;
+}

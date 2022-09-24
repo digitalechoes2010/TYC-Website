@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.WYS-Img {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.WYS-Logos {
+  z-index: 19;
+  height: 100%;
+  position: absolute;
+}
+.WYS-Img img {
+  height: 650px;
+  z-index: 20;
+}
+
+.WYS-Info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  height: 45rem;
+}
+.WYS-Info p,
+.WYS-Info h3 {
+  font-family: "Poppins-Semibold";
+}
+.WYS-SectionMsg {
+  font-size: 12px;
+}
+.WYS-Info h3 {
+  font-size: 40px;
+}
+.icons {
+  height: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .WhatYouShare {
+    padding-top: 0rem;
+  }
+  .WYS-Info p,
+  .WYS-Info h3 {
+    color: #fff;
+    text-align: center;
+  }
+
+  .icons {
+    display: none;
+  }
+  .WYS-Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .WYS-Img img {
+    height: 450px;
+  }
+  .WYS-Info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0rem;
+    height: 10rem;
+  }
+  .WYS-Info h3 {
+    font-size: 1.5em;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .WYS-Info p,
+  .WYS-Info h3 {
+    color: #fff;
+    text-align: center;
+  }
+  .icons {
+    display: none;
+  }
+  .WYS-Img img {
+    height: 450px;
+    margin-top: 2rem;
+  }
+  .WYS-Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .WYS-Info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 0rem;
+    height: 10rem;
+  }
+  .WYS-Info p {
+    margin-bottom: 0rem;
+  }
+  .WYS-Info h3 {
+    font-size: 2em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .WYS-Info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-left: 3rem;
+    height: 45rem;
+  }
+  .WYS-Img img {
+    height: 600px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
+  .icons {
+    display: block;
+  }
+  .WYS-Img {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .WYS-Img img {
+    height: 600px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    margin-left: -4rem;
+  }
+  .WYS-Info p,
+  .WYS-Info h3 {
+    color: #000;
+  }
+  .WYS-Info h3 {
+    font-size: 40px;
+  }
+  .WYS-Info {
+    padding-left: 4rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .WhatYouShare_Row {
+    margin-top: -5rem;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .WYS-Img img {
+    height: 620px;
+    margin-bottom: 0rem;
+    margin-left: -5rem;
+    margin-top: 0rem;
+  }
+  .WYS-Info {
+    padding-left: 8rem;
+  }
+  .WhatYouShare_Row {
+    margin-top: 0rem;
+  }
+}

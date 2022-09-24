@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Medula One";
+  src: url(../../../assets/Fonts/MedulaOne-Regular.ttf);
+}
+
+.Card {
+  margin: 1rem 0rem 1rem 1rem;
+  min-height: 100%;
+}
+.Card-OutOfStock {
+  font-family: "Medula One";
+  position: absolute;
+  margin: 0.7rem 0rem 0rem 2rem;
+  color: #fff;
+  background-color: magenta;
+  padding: 0rem 1rem;
+  font-size: 12.3px;
+}
+.Card-Img {
+  max-height: 18rem;
+  min-height: 18rem;
+  margin-bottom: 0.2rem;
+  max-width: 100%;
+}
+.Card-img__Container {
+  position: relative;
+}
+.Card-addToCart {
+  transform-origin: bottom right;
+  transition: 0.5s ease;
+  transform: scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "Medula One";
+}
+
+.Card-img__Container:hover .Card-addToCart {
+  transform: scale(1);
+  transition: transform 300ms 100ms cubic-bezier(0.17, 0.67, 0.32, 0.99);
+}
+
+.Card-addToCart:active {
+  transform: scale(0.9);
+}
+
+.Card-img__Container:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.Card-img__Container:hover .Card-Img {
+  opacity: 0.3;
+}
+.Card-img__Container:hover .Card-addToCart {
+  opacity: 1;
+}
+
+.Card-Type-Rating {
+  font-family: "Poppins-SemiBold";
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  margin-top: 1rem;
+}
+
+.Card-Title {
+  padding: 0rem 2rem;
+}
+.Card-Title__Link {
+  color: black;
+  font-family: "Poppins-SemiBold";
+  font-size: 1.4rem;
+}
+.Card-Title__Link:hover {
+  color: black;
+}
+.Card-Price-Order {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+.Card-Price {
+  margin-top: 1rem;
+  font-family: "Poppins-Regular";
+  color: gray;
+}
+.Card-Order {
+  width: 4rem;
+}
+
+.Card-Stars {
+  transform: scale(0.5);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Card {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .Card-Title__Link {
+    font-size: 1.5rem;
+  }
+  .Card-Price {
+    font-size: 19.1px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Card-Type-Rating {
+    padding-right: 0rem;
+  }
+  .Card-Stars {
+    padding: 0rem;
+  }
+  .Card-Stars-Col {
+    padding: 0rem;
+  }
+  .Card-Type {
+    font-size: 12px;
+  }
+  .Card-Title__Link {
+    font-size: 22px;
+  }
+  .Card-Price {
+    font-size: 19.1px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

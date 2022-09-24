@@ -1,0 +1,421 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.SignIn {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem 8rem;
+}
+.SignIn-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.SignIn-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+}
+
+.SignIn-SignUpSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins-Bold";
+  margin-bottom: 1rem;
+}
+
+.SignIn-SignUpSection p {
+  margin: 0rem;
+}
+.SignIn-SignUpSection__Link,
+.SignIn-ForgotPassword {
+  color: rgb(211, 0, 214);
+  font-size: 28px;
+  margin-bottom: 0rem;
+  margin-left: 5px;
+}
+
+.SignIn-Input {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+}
+.SignIn-Form {
+  display: flex;
+  flex-direction: column;
+}
+.SignIn-ForgotPassword {
+  font-family: "Poppins-Bold";
+  font-size: 1.2rem;
+  margin-left: auto !important;
+}
+
+.SignIn-Btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0rem;
+}
+.SignIn-Btns__Submit,
+.SignIn-Btns__OTP {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+}
+
+.SignIn-Btns__Submit {
+  background-color: rgb(211, 0, 214);
+  border: 1px solid rgb(211, 0, 214);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.SignIn-Btns__Submit:hover {
+  background-color: rgb(162, 0, 165);
+}
+.SignIn-Btns__OTP {
+  background-color: gray;
+  transition: 0.2s;
+  border: 1px solid gray;
+}
+.SignIn-Btns__OTP:hover {
+  background-color: #fff;
+  color: gray;
+  text-decoration: none;
+}
+.SignIn-Separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+.SignIn-Separator p {
+  flex: auto;
+  text-align: center;
+  margin: 0;
+  font-family: "Poppins-SemiBold";
+  padding: 0rem 3rem;
+}
+.SignIn-Separator span {
+  flex: auto;
+  height: 5px;
+  border-radius: 5px;
+  background-color: rgb(211, 0, 214);
+}
+
+.SignIn-SocialMedia {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.SignIn-Social {
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0rem 0.2rem 0rem;
+  transition: 0.2s;
+  font-family: "Poppins-SemiBold";
+}
+
+.SignIn-facebook {
+  background-color: #fff;
+  color: #3b5998;
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+.SignIn-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+  border: 1px solid #3b5998;
+}
+.SignIn-linkedIn {
+  background-color: #0e76a8;
+  color: #fff;
+  border: 1px solid #0e76a8;
+}
+.SignIn-linkedIn:hover {
+  background-color: #fff;
+  color: #0e76a8;
+  text-decoration: none;
+}
+.SignIn-twitter {
+  background-color: #1da1f2;
+  color: #fff;
+  border: 1px solid #1da1f2;
+}
+.SignIn-twitter:hover {
+  background-color: #fff;
+  color: #1da1f2;
+  text-decoration: none;
+}
+.SignIn-Google {
+  background-color: #fff;
+}
+.SignIn-Google:hover {
+  background-color: #4285f4;
+  color: #fff;
+}
+.SignIn-Img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../assets/SVGs/Cloud-1.svg) right 80% top -4rem/15rem 58% no-repeat,
+    url(../../assets/SVGs/Cloud-2.svg) left 80% top -8rem/12rem 70% no-repeat;
+  animation: floatInPlace 10s linear infinite alternate;
+}
+.SignIn-Img__Lock {
+  width: 20rem;
+}
+.SignIn-Img__Stars {
+  position: absolute;
+  width: 25rem;
+}
+@keyframes floatInPlace {
+  0% {
+    background-position: right 80% top -4rem, left 80% top -8rem;
+  }
+  50% {
+    background-position: right 80% top -5rem, left 80% top -7rem;
+  }
+  100% {
+    background-position: right 80% top -4rem, left 80% top -8rem;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .SignIn {
+    padding: 2rem 2rem;
+  }
+  .SignIn-SocialMedia {
+    flex-wrap: wrap;
+  }
+  .SignIn-Social {
+    width: 45%;
+    border-radius: 20px;
+  }
+  .SignIn-Separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0rem;
+  }
+  .SignIn-Separator p {
+    flex: auto;
+    margin: 0;
+    font-family: "Poppins-SemiBold";
+    font-size: 12px;
+    padding: 0rem 0rem;
+    text-align: center;
+  }
+  .SignIn-Separator span {
+    padding: 0rem 0rem;
+    flex: auto;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(211, 0, 214);
+  }
+  .SignIn-Btns__Submit,
+  .SignIn-Btns__OTP {
+    font-size: 14px;
+    width: 48%;
+    padding: 0.5rem 0.2rem;
+  }
+  .SignIn-ForgotPassword {
+    font-size: 1rem;
+  }
+
+  .SignIn-SignUpSection {
+    justify-content: flex-start;
+  }
+  .SignIn-SignUpSection p {
+    font-size: 15px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignIn-SignUpSection__Link {
+    font-size: 15px;
+    width: auto;
+  }
+  .SignIn-Img__Lock {
+    display: none;
+  }
+  .SignIn-Img__Stars {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .SignIn-Separator p {
+    font-size: 12px;
+    flex: auto;
+    padding: 0rem;
+  }
+  .SignIn-Separator__right {
+    margin-right: 0.5rem;
+  }
+  .SignIn-Separator__left {
+    margin-left: 0.5rem;
+  }
+  .SignIn-Social {
+    font-size: 10px;
+    padding: 0.2rem 0.2rem;
+  }
+  .SignIn-Btns__Submit,
+  .SignIn-Btns__OTP {
+    font-size: 10px;
+    width: 6rem;
+    padding: 0rem 0.2rem;
+  }
+  .SignIn-Btns {
+    justify-content: space-between;
+  }
+  .SignIn-ForgotPassword {
+    font-size: 1rem;
+  }
+
+  .SignIn-SignUpSection {
+    justify-content: flex-start;
+  }
+  .SignIn-SignUpSection p {
+    font-size: 16px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignIn-SignUpSection__Link {
+    font-size: 16px;
+    width: auto;
+  }
+  .SignIn-Img {
+    padding: 0rem 4rem;
+  }
+  .SignIn-Img__Lock {
+    width: 20rem;
+    display: block;
+  }
+  .SignIn-Img__Stars {
+    width: 15rem;
+    display: block;
+  }
+  .SignIn-Img {
+    background: url(../../assets/SVGs/Cloud-1.svg) right 80% top -4rem/8rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-2.svg) left 80% top -8rem/6rem 70% no-repeat;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .SignIn-Separator p {
+    font-size: 14px;
+    padding: 0rem 0rem;
+  }
+
+  .SignIn-Social {
+    font-size: 11px;
+    padding: 0.5rem 0.5rem;
+  }
+  .SignIn-Btns {
+    justify-content: space-between;
+  }
+  .SignIn-Btns__Submit,
+  .SignIn-Btns__OTP {
+    font-size: 11px;
+    width: 40%;
+    padding: 0.5rem 1rem;
+  }
+  .SignIn-SignUpSection p {
+    font-size: 19px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignIn-SignUpSection__Link {
+    font-size: 19px;
+    width: auto;
+  }
+  .SignIn-Img__Stars {
+    width: 20rem;
+    display: block;
+  }
+  .SignIn-Img {
+    background: url(../../assets/SVGs/Cloud-1.svg) right 80% top -4rem/10rem 58%
+        no-repeat,
+      url(../../assets/SVGs/Cloud-2.svg) left 80% top -8rem/8rem 70% no-repeat;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .SignIn-Separator p {
+    font-size: 14px;
+  }
+  .SignIn-Social {
+    font-size: 14px;
+  }
+  .SignIn-Btns {
+    justify-content: space-between;
+  }
+  .SignIn-Btns__Submit,
+  .SignIn-Btns__OTP {
+    font-size: 14px;
+    width: 12rem;
+    padding: 0.5rem 1rem;
+  }
+  .SignIn-ForgotPassword {
+    font-size: 1.2rem;
+  }
+
+  .SignIn-SignUpSection {
+    justify-content: center;
+  }
+  .SignIn-SignUpSection p {
+    font-size: 22px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignIn-SignUpSection__Link {
+    font-size: 22px;
+    width: auto;
+  }
+  .SignIn-Img__Stars {
+    width: 25rem;
+    display: block;
+  }
+  .SignIn-Img {
+    background: url(../../assets/SVGs/Cloud-1.svg) right 80% top -4rem/15rem 58%
+        no-repeat,
+      url(../../assets/SVGs/Cloud-2.svg) left 80% top -8rem/12rem 70% no-repeat;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .SignIn-Btns__Submit,
+  .SignIn-Btns__OTP {
+    font-size: 16px;
+    width: 12rem;
+    padding: 0.5rem 1rem;
+  }
+  .SignIn-SignUpSection p {
+    font-size: 24px;
+    width: auto;
+    margin: 0rem 0rem 0rem 10px;
+  }
+  .SignIn-SignUpSection__Link {
+    font-size: 24px;
+    width: auto;
+  }
+}

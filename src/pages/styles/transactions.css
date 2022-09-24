@@ -1,0 +1,53 @@
+.Transactions {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 2rem 8rem;
+}
+.Transactions-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.Transactions-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+.Transactions-Table {
+  border-collapse: separate;
+  border-spacing: 0 30px;
+  margin-top: 5rem;
+}
+.Transactions-TableHeader__column {
+  text-align: center;
+  border: none !important;
+  border-right: 2px solid rgba(128, 128, 128, 0.671) !important;
+  font-family: "Poppins-Bold";
+}
+.Transactions-TableHeader__LastColumn {
+  border: none !important;
+  border-right: 0px;
+  text-align: center;
+}
+.Transactions-TableRow {
+  margin-top: 2rem !important;
+}
+.Transactions-TableRow__Column,
+.Transactions-TableRow__FirstColumn,
+.Transactions-TableRow__LastColumn {
+  color: #fff;
+  background-color: #000;
+  font-family: "Poppins-Regular";
+  margin-top: 1rem !important;
+  text-align: center;
+}
+.Transactions-TableRow__FirstColumn {
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  margin: 2rem 0rem !important;
+}
+.Transactions-TableRow__LastColumn {
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}

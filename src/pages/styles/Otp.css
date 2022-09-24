@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.OTP {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem;
+}
+.OTP-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.OTP-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+
+.OTP-Input {
+  width: 100% !important;
+  padding: 0rem 5rem !important;
+}
+.OTP-PhoneInput__Dropdown {
+  padding: 5px !important;
+  width: 10% !important;
+  outline: none !important;
+}
+.OTP-PhoneInput__Dropdown:focus {
+  outline: none !important;
+}
+.OTP-PhoneInput__Input {
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 1.5rem;
+  margin: 1rem 0rem !important;
+}
+.OTP-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.OTP-Btns {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+.OTP-Btns__Submit {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+  background-color: #a200a5;
+  border: 1px solid #a200a5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.OTP-Btns__Submit:hover {
+  background-color: rgb(162, 0, 165);
+  border: 1px solid #a200a5;
+}
+.OTP-Btns__disabled,
+.OTP-Btns__disabled:hover {
+  background-color: #8da2af;
+  border: 1px solid #8da2af;
+  cursor: default;
+}
+
+.OTP-check {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 30px);
+  border: solid 20px #a200a5;
+  width: 100px;
+  height: 50px;
+  margin: -55px 0 0 -35px;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg) scale(0.7);
+  transform-origin: top left;
+  opacity: 0;
+}
+.OTP-check__animate {
+  animation: start 0.9s ease forwards;
+  animation-play-state: running !important;
+  opacity: 1;
+}
+@keyframes start {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    width: 0;
+    height: 50px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .OTP {
+    padding: 2rem 2rem;
+  }
+  .OTP-Header__Title {
+    font-size: 1.5rem;
+  }
+  .OTP {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .OTP {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+@keyframes float {
+  0% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+
+  50% {
+    background-position: right 110% top -8rem, left 100% top 0rem,
+      right 90% top 8rem, left 80% top 16rem;
+  }
+  100% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+}

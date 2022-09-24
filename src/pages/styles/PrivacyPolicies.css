@@ -1,0 +1,63 @@
+.PrivacyPolicies {
+  padding: 8rem;
+}
+.PrivacyPolicies h1 {
+  font-family: "Poppins-Bold";
+}
+.PrivacyPolicies-Title {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+  padding-left: 0.5rem;
+}
+
+.PrivacyPolicies-text {
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .PrivacyPolicies {
+    padding: 8rem 2rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .PrivacyPolicies {
+    padding: 8rem 4rem;
+  }
+
+  .PrivacyPolicies-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .PrivacyPolicies-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .PrivacyPolicies {
+    padding: 8rem;
+  }
+
+  .PrivacyPolicies-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .PrivacyPolicies-text {
+    padding-left: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

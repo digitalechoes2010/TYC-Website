@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.Welcome {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem 0rem;
+}
+.Welcome-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.Welcome-Header__Title {
+  margin-top: 1.5rem;
+  font-family: "Poppins-Bold";
+  text-align: center;
+}
+.Welcome-Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Welcome-Profile__Pic {
+  width: 15rem;
+  border-radius: 20px;
+}
+.Welcome-Profile__Name {
+  margin-top: 2rem;
+  font-family: "Poppins-SemiBold";
+}
+
+.Welcome-Account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+}
+
+.Welcome-Account p {
+  font-size: 28px;
+  margin: 0rem;
+}
+.Welcome-Account__SignOut {
+  color: rgb(211, 0, 214);
+  font-size: 28px;
+  margin-bottom: 0rem;
+  margin-left: 5px;
+}
+.Welcome-Continue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+
+.Welcome-Continue__Btn {
+  color: #fff;
+  font-family: "Poppins-Bold";
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 20px;
+  width: 12rem;
+  text-align: center;
+  background-color: #8da2af;
+  border: 1px solid #8da2af;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.Welcome-Continue__Btn:hover {
+  background-color: rgb(162, 0, 165);
+  border: 1px solid #a200a5;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Welcome {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /15rem 58% no-repeat,
+      rgb(245, 245, 245);
+    padding: 2rem 2rem;
+  }
+  .Welcome-Account p {
+    font-size: 16px;
+  }
+  .Welcome-Account__SignOut {
+    font-size: 16px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 577px) {
+  .Welcome {
+    background: url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem
+        58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) right 25% bottom 20% /15rem 58% no-repeat,
+      url(../../assets/SVGs/Cloud-3-grey.svg) left 25% top 20% /20rem 58% no-repeat,
+      rgb(245, 245, 245);
+    animation: float 90s ease-in-out infinite;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+@keyframes float {
+  0% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+
+  50% {
+    background-position: right 110% top -8rem, left 100% top 0rem,
+      right 90% top 8rem, left 80% top 16rem;
+  }
+  100% {
+    background-position: right -10% top -8rem, left 0% top 2rem,
+      right 10% top 11rem, left 20% top 18rem;
+  }
+}

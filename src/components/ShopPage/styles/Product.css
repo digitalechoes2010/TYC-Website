@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../../../assets/Fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../assets/Fonts/Poppins-Regular.ttf);
+}
+.Product {
+  max-width: 100%;
+  padding: 0rem 5rem;
+  margin: 4rem 0rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.Product-Img__Container {
+  display: flex;
+  justify-content: center;
+}
+.Product-Img {
+  max-width: 500px;
+  max-height: 450px;
+}
+.Product-Section__Info {
+  padding-top: 2rem;
+}
+.Product-Category {
+  font-family: "Poppins-SemiBold";
+}
+.Product-Price {
+  margin: 2rem 0rem 0rem;
+  font-family: "Poppins-Regular";
+  color: gray;
+}
+.Product-Name {
+  font-family: "Poppins-SemiBold";
+}
+.Product-ReviewNumber {
+  font-family: "Poppins-Regular";
+  color: gray;
+}
+.Product-info {
+  font-family: "Poppins-Bold";
+}
+.Product-Price__Crossed {
+  text-decoration: line-through;
+}
+.Product-BuyingSection {
+  margin-top: 2rem;
+}
+.Product-addToCart {
+  text-align: center;
+  border: none;
+  padding: 0.5rem 4rem;
+  background: rgb(255, 97, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 97, 0, 1) 0%,
+    rgba(255, 145, 0, 1) 47%,
+    rgba(253, 255, 161, 1) 100%
+  );
+  color: #fff;
+  font-family: "Medula One";
+}
+.Product-addToCart:hover,
+.Product-addToCart:active {
+  background: rgb(213, 67, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 67, 0, 1) 0%,
+    rgba(210, 123, 0, 1) 47%,
+    rgba(206, 208, 132, 1) 100%
+  );
+}
+
+.Product-addToCart:active {
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Product-Img {
+    max-width: 100%;
+    max-height: auto;
+  }
+  .Product {
+    padding: 0rem 3rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Product-Category {
+    font-size: 12px;
+  }
+  .Product-Name {
+    font-size: 22.9px;
+  }
+  .Product-Price {
+    font-size: 19.1px;
+  }
+  .Product-addToCart {
+    font-size: 18.3px;
+  }
+  .Products-Related {
+    font-size: 22.9px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

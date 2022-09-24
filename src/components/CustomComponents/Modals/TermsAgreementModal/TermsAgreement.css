@@ -1,0 +1,117 @@
+.TermsAgreement-ModalBody {
+  max-height: 75vh;
+  overflow-y: scroll;
+}
+.TermsAgreement-Footer {
+  height: 40px;
+}
+.TermsAgreement-Title {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+  margin: 2rem 0rem;
+  padding-left: 0.5rem;
+}
+
+.TermsAgreement-text {
+  font-family: "Poppins-Regular";
+  padding-left: 1rem;
+}
+.TermsAgreement-Header {
+  color: #cd07f6;
+  font-family: "Poppins-Bold";
+}
+.TermsAgreement-Button,
+.TermsAgreement-Button:focus,
+.TermsAgreement-Button:active,
+.TermsAgreement-Button:hover {
+  background-color: transparent !important;
+  border: none !important;
+  color: #cd07f6 !important;
+  box-shadow: none !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .TermsAgreement {
+    padding: 8rem 2rem;
+  }
+  .TermsAgreement-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .TermsAgreement-text {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+  .TermsAgreement-Button {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .TermsAgreement {
+    padding: 8rem 4rem;
+  }
+
+  .TermsAgreement-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .TermsAgreement-text {
+    padding-left: 1rem;
+  }
+  .TermsAgreement-Button {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .TermsAgreement {
+    padding: 8rem;
+  }
+
+  .TermsCoTermsAgreementnditions-Title {
+    margin: 2rem 0rem;
+    padding-left: 0.5rem;
+  }
+
+  .TermsAgreement-text {
+    padding-left: 1rem;
+  }
+
+  .SignUp-Agreement {
+    margin-top: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+  .TermsAgreement-Button {
+    margin: 0 0 0 0.2rem;
+    color: rgb(211, 0, 214);
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .TermsAgreement-Button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .TermsAgreement-Button {
+    font-size: 1rem;
+    margin: 0 0 0 1rem;
+  }
+}

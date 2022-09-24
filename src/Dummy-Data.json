@@ -1,0 +1,53 @@
+{
+  "data": {
+    "Features": [
+      {
+        "id": 1,
+        "title": "Contactless Communication",
+        "name": "Communication",
+        "text": "TYC chips work by instantly sharing the chosen and stored digital information on it once it is physically tapped onto another device. This allows for less contact as the information does not need to be manually inputted into a device. At TYC, our mission is to simplify meaningful interactions so that our users can be more efficient. Whether it is a resume, art portfolio, social media links, payment accounts, invites to calendar events; you can store it all on your TYC profile and choose when you wanna share it."
+      },
+      {
+        "id": 2,
+        "title": "Instant Accessibility",
+        "name": "Access",
+        "text": "Tap and Go. It’s that simple. The data contained on your TYC profile can always be updated via the mobile application, or through any web browser. Let’s say you lose your TYC card and want to lock the card so that it is no longer accessible to others, all you have to do is switch the Card Off feature. Tap Your Chip, is a revolutionary concept which allows users to upload, store, and share their information instantly. It’s can all be done through our mobile application. "
+      },
+      {
+        "id": 3,
+        "title": "Secured Networking",
+        "name": "Secure",
+        "text": "Tap Your Chip utilizes Near Field Technology in order to safely transmit our user’s information from device to device. NFC is so safe that even banks and other financial institutions such as Apple Pay utilize the technology which allows their customers to safely conduct daily transactions. "
+      },
+      {
+        "id": 4,
+        "title": "Convenient Sharing",
+        "name": "Sharing",
+        "text": "With Tap Your Chip, you pick and choose which information you want to share. Just met a business colleague? Switch to only sharing your business profile. Exchanging information with a future date? Share both your business and social profile. You can even manually select which links to share with the Direct On/Off feature. So that next time you want to only share a PDF file, you can directly share that specific file, without sharing unnecessary information. "
+      },
+      {
+        "id": 5,
+        "title": "Efficient Optimization",
+        "name": "Optimization",
+        "text": "Keep track of your recent connections and monitor in real time where people are checking out your links. Our unique feature allows our users to instantly collect data on their most visited profiles, locations where their profiles were checked out, and even where they physically tapped their chip. Stick a TYC Chip onto your physical products and keep track of where your goods make it globally. Our data analytics makes it easier for you to understand yourself and your brand, all through a simplified app. "
+      }
+    ],
+    "Products": [
+      {
+        "id": 1,
+        "text": "TYC Cards",
+        "name": "Cards"
+      },
+      {
+        "id": 2,
+        "text": "TYC Chips",
+        "name": "Chips"
+      },
+      {
+        "id": 3,
+        "text": "TYC Phone Cases",
+        "name": "PhoneCases"
+      }
+    ]
+  }
+}

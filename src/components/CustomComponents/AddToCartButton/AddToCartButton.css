@@ -1,0 +1,170 @@
+.button {
+  text-align: center;
+  border: none;
+  padding: 0.5rem 2rem;
+}
+
+.cart-button {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem 2rem;
+  border: 0;
+  background: rgb(255, 97, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 97, 0, 1) 0%,
+    rgba(255, 145, 0, 1) 47%,
+    rgba(253, 255, 161, 1) 100%
+  );
+  color: #fff;
+  font-family: "Medula One";
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.cart-button:hover {
+  background: rgb(213, 67, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(213, 67, 0, 1) 0%,
+    rgba(210, 123, 0, 1) 47%,
+    rgba(206, 208, 132, 1) 100%
+  );
+}
+.cart-button:active {
+  transform: scale(0.9);
+}
+
+.cart-button .cart-icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  font-size: 2em;
+  transform: translate(-50%, -50%);
+}
+.cart-button .box-icon {
+  position: absolute;
+  z-index: 3;
+  top: -25%;
+  left: 52%;
+  font-size: 1.2em;
+  transform: translate(-50%, -50%);
+}
+.cart-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  font-size: 1.2em;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+.cart-button span.add-to-cart {
+  opacity: 1;
+}
+.cart-button span.added {
+  opacity: 0;
+}
+
+.cart-button.clicked .cart-icon {
+  animation: cart 1.5s ease-in-out forwards;
+}
+.cart-button.clicked .box-icon {
+  animation: box 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.add-to-cart {
+  animation: txt1 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.added {
+  animation: txt2 1s ease-in-out forwards;
+}
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes box {
+  0%,
+  40% {
+    top: -25;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes txt2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #fff;
+  fill: none;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 1.5s forwards;
+}
+
+.checkmark {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #fff;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 1.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}

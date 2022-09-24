@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../../../../assets/Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../../../../assets/Fonts/Poppins-SemiBold.ttf);
+}
+.AddLink-AddButton {
+  border-radius: 20px;
+  width: 100%;
+  height: 4rem;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins-Medium";
+  transition: 1s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.AddLink {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  border-radius: 0;
+}
+.AddLink:last-child {
+  border-bottom: none;
+}
+.AddLink-AddButton:hover {
+  transform: scale(1.05);
+}
+.AddLink-Input {
+  border-radius: 30px;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 0rem;
+}
+
+.AddLink-ModalContent {
+  background-color: rgb(245, 245, 245) !important;
+  border: none !important;
+  font-family: "Poppins-SemiBold" !important;
+}
+
+.AddLink-SubmitButton {
+  background-color: rgb(211, 0, 214);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+.AddLink-CancelButton {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins-Regular";
+}
+.AddLink-SubmitButton:hover {
+  background-color: rgb(197, 0, 201);
+  border: none;
+}
+.AddLink-CancelButton:hover {
+  background-color: #5f666d;
+}

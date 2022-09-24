@@ -1,0 +1,212 @@
+.logo-Container,
+.logo-Container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.logo-Container2 {
+  padding-bottom: 5rem;
+  align-items: stretch;
+}
+
+.Generator2-logo {
+  margin-left: 5rem;
+}
+.logo1 {
+  animation: Flow 6.5s linear infinite normal forwards;
+}
+.logo2 {
+  animation: Flow 7.5s linear infinite normal forwards;
+}
+.logo3 {
+  animation: Flow 5.5s linear infinite normal forwards;
+}
+.logo4 {
+  animation: Flow 6.4s linear infinite normal forwards;
+}
+.logo5 {
+  animation: Flow 6s linear infinite normal forwards;
+}
+.logo6 {
+  animation: Flow 7s linear infinite normal forwards;
+}
+.logo7 {
+  animation: Flow 6.3s linear infinite normal forwards;
+}
+.logo8 {
+  animation: Flow 7.1s linear infinite normal forwards;
+}
+.logo9 {
+  animation: Flow 5.5s linear infinite normal forwards;
+}
+.logo10 {
+  animation: Flow 7s linear infinite normal forwards;
+}
+.logo11 {
+  animation: Flow 6.5s linear infinite normal forwards;
+}
+
+@keyframes Flow {
+  0% {
+    transform: translate(-200px, 0px) rotate(0deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  25% {
+    transform: translate(0px, 20px) rotate(20deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  50% {
+    transform: translate(150px, 0px) rotate(-20deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  75% {
+    transform: translate(300px, 0px) rotate(20deg);
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    transform: translate(400px, 20px) rotate(0deg);
+    filter: blur(5px);
+    opacity: 0;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  @keyframes Flow {
+    0% {
+      transform: translate(-200px, 0px) rotate(0deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    25% {
+      transform: translate(0px, 20px) rotate(20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    50% {
+      transform: translate(150px, 0px) rotate(-20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    75% {
+      transform: translate(300px, 0px) rotate(20deg);
+      opacity: 1;
+      filter: blur(2px);
+    }
+    100% {
+      transform: translate(400px, 20px) rotate(0deg);
+      filter: blur(5px);
+      opacity: 0;
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  @keyframes Flow {
+    0% {
+      transform: translate(-400px, 0px) rotate(0deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    25% {
+      transform: translate(-200px, 20px) rotate(20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    50% {
+      transform: translate(0px, 0px) rotate(-20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    75% {
+      transform: translate(200, 0px) rotate(20deg);
+      opacity: 1;
+      filter: blur(2px);
+    }
+    100% {
+      transform: translate(400px, 20px) rotate(0deg);
+      filter: blur(5px);
+      opacity: 0;
+    }
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logo-Container2 {
+    margin-left: 2rem;
+  }
+  @keyframes Flow {
+    0% {
+      transform: translate(-150px, 0px) rotate(0deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    25% {
+      transform: translate(0px, 20px) rotate(20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    50% {
+      transform: translate(150px, 0px) rotate(-20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    75% {
+      transform: translate(300px, 0px) rotate(20deg);
+      opacity: 1;
+      filter: blur(2px);
+    }
+    100% {
+      transform: translate(400px, 20px) rotate(0deg);
+      filter: blur(5px);
+      opacity: 0;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  .logo-Container2 {
+    margin-left: 4rem;
+  }
+  @keyframes Flow {
+    0% {
+      transform: translate(-70px, 0px) rotate(0deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    25% {
+      transform: translate(0px, 20px) rotate(20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    50% {
+      transform: translate(150px, 0px) rotate(-20deg);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    75% {
+      transform: translate(300px, 0px) rotate(20deg);
+      opacity: 1;
+      filter: blur(2px);
+    }
+    100% {
+      transform: translate(400px, 20px) rotate(0deg);
+      filter: blur(5px);
+      opacity: 0;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .logo-Container2 {
+    margin-left: 5rem;
+  }
+}
