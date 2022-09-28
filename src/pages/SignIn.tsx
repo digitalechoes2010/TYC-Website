@@ -16,12 +16,16 @@ import {
   required,
 } from "../components/FormHelper/validtionhelper";
 import "./styles/SignIn.css";
-import GoogleLogin from "react-google-login";
+// import GoogleLogin from "react-google-login";
 // import FacebookLogin from "react-facebook-login";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { connect } from "react-redux";
 import { requestLogin } from "../store/Actions/loginActionCreator";
 import { errorToast } from "../utils/toasthelper";
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from "jwt-decode";
+
+
 
 const Google = styled(FcGoogle)`
   background-color: #fff;
@@ -32,7 +36,9 @@ const Google = styled(FcGoogle)`
 class SignIn extends Component<any, any> {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user: {}
+    };
   }
   onSubmit = async (values) => {
     console.log(JSON.stringify(values));
@@ -44,19 +50,23 @@ class SignIn extends Component<any, any> {
     this.props.doLogin(postData);
     // window.location.href = "/Profile/Dashboard";
   };
-
-  googleLogin = (data) => {
-    console.log("google data", data);
-    if (data?.tokenId) {
+  
+  googleLogin = (credentialResponse) => {
+    console.log("Google Data", credentialResponse);
+    var decode = jwt_decode(credentialResponse.credential);
+    this.setState({user: decode})
+    if (credentialResponse?.credential) {
       const postData: any = {
-        socialId: data.profileObj.googleId,
-        email: data.profileObj.email,
+        socialId: this.state.user.sub,
+        email: this.state.user.email,
         accountType: "google",
       };
+      console.log("Post Data", postData)
       this.props.doLogin(postData);
     } else {
     }
   };
+  
   facebookLogin = (data) => {
     console.log(data);
     if (data?.email) {
@@ -140,29 +150,43 @@ class SignIn extends Component<any, any> {
               )}
             />
               */}
-              <br></br>
-            <div className="SignIn-Separator">
-             {/* <span className="SignIn-Separator__left"></span>*/}
+            <br></br>
+            {/* <div className="SignIn-Separator">
+              <span className="SignIn-Separator__left"></span>
               <p>Sign in with</p>
-          {/*    <span className="SignIn-Separator__right"></span> */}
-            </div>
-            <div className="SignIn-SocialMedia" style={{display:"unset"}}>
+              <span className="SignIn-Separator__right"></span>
+            </div> */}
+            <div className="SignIn-SocialMedia">
               <FacebookLogin
                 appId="4389598784461723"
                 fields="name,email,picture"
                 callback={this.facebookLogin}
                 render={(renderProps) => (
-                  <button style={{margin:"0 auto"}}
+                  <button
                     className="SignIn-Social SignIn-facebook"
                     onClick={() => renderProps.onClick()}
                     disabled={renderProps.isDisabled}
                   >
                     <FaFacebookF />
-                    Facebook
+                    Sign in with Facebook
                   </button>
                 )}
               />
-              <GoogleLogin
+              <div className="SignIn-Social">
+                <GoogleLogin
+                  text="signin_with"
+                  theme="outline"
+                  size="large"
+                  shape="circle"
+                  width="225px"
+                  logo_alignment="center"
+                  onSuccess={this.googleLogin}
+                  onError={() => {
+                    console.log('Login Failed');
+                  }}
+                />
+              </div>
+              {/* <GoogleLogin
                 clientId="200805530561-u6lhmvq23ri5to13pirpnbmr032fjna5.apps.googleusercontent.com"
                 buttonText="Login"
                 onSuccess={this.googleLogin}
@@ -185,7 +209,7 @@ class SignIn extends Component<any, any> {
                     Google
                   </button>
                 )}
-              />
+              /> */}
             </div>
           </Col>
           <Col sm={6} className="SignIn-Img">

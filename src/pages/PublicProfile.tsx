@@ -20,6 +20,7 @@ export default class PublicProfile extends Component<any, any> {
       Profile: "",
       contacts: [],
       isActive: false,
+      page: 1,
       activeDirect: "",
       isLoading: false,
     };
@@ -167,11 +168,66 @@ export default class PublicProfile extends Component<any, any> {
         })
         .catch((error: any) => {});
     }
+    this.getData();
   }
+  
+  getData = () => {
+    let page = this.state.page;
+
+    apiClient
+      .get(PathApi.getContactsbyUserId + page)
+      .then((data: any) => {
+        console.log("contact data", data);
+        const res = data.data;
+        if (data.status === 200) {
+          const mapData = res.contacts.map((e: any) => {
+            return {
+              userId: e.contactId,
+              userName:
+                e.contactUserDetails?.name ?? e.contactUserDetails?.username,
+              location: e.tapAddress,
+              lat: e?.location.lat,
+              lng: e?.location.long,
+              profilePic: e.contactUserDetails?.profilePic,
+            };
+          });
+          this.setState(
+            {
+              total: res.total && res.total,
+              page: parseInt(res.page),
+              size: res.size && res.size,
+              contacts: [...this.state.contacts, ...mapData],
+            },
+            () => {
+              console.log("contacts", this.state.contacts);
+              console.log(this.state.isLoading);
+            }
+          );
+        }
+      })
+      .catch((error: any) => {
+        console.log(error.response);
+        this.setState({
+          isLoading: false,
+        });
+      })
+      .finally(() => {
+        this.setState({
+          isLoading: false,
+        });
+      });
+  };
 
   render() {
     console.log(this.state.userData);
     const { userData } = this.state;
+      
+  let isContact = false;
+  this.state.contacts.map((contact: any) => {
+    if(contact.userId === userData.id)
+        return isContact = true;
+    return isContact;
+  })
     
   const myVCard = new VCard();
 
@@ -291,12 +347,16 @@ export default class PublicProfile extends Component<any, any> {
                 />
                 {userData.name ?
                   <h3 className="PublicProfile-Username">{userData.name}</h3>
-                  :
+                :
                   <h3 className="PublicProfile-Username">{userData.username}</h3>
                 }
-                <button onClick={addContact} className="Dashboard-EditProfile">
-                  Add Contact
-                </button>
+                {isContact ?
+                  <button onClick={addContact} className="Dashboard-EditProfile">
+                    Add Contact
+                  </button>
+                :
+                  null
+                }
                 <p className="PublicProfile-ProfileLink">
                   https://tapyourchip.com/p/{userData.link}
                 </p>

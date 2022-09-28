@@ -12,7 +12,7 @@ const TermsAgreement = (props) => {
   return (
     <div>
       <Button className="TermsAgreement-Button" onClick={toggle}>
-        I aggree to the terms and conditions
+        I agree to the terms and conditions
       </Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader className="TermsAgreement-Header" toggle={toggle}>

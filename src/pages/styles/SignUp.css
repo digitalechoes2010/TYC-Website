@@ -20,6 +20,51 @@
   margin-bottom: 2rem;
 }
 
+.rightDiv {
+ width: 50%;
+}
+
+.rightDiv p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.SignIn-SocialMedia {
+  max-width: 100%;
+}
+
+.SignIn-Social {
+  max-width: 225px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  margin: 0rem auto;
+  transition: 0.2s;
+  font-family: "Poppins-SemiBold";
+  font-size: 14px;
+}
+
+.SignIn-facebook {
+  background-color: #fff;
+  color: #3b5998;
+  text-decoration: none;
+  border: 1px solid lightgray;
+  margin-bottom: 1rem;
+}
+
+.SignIn-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+  border: 1px solid #3b5998;
+}
+
 .SignUp-Header__Title {
   margin-top: 1.5rem;
   font-family: "Poppins-Bold";
@@ -100,32 +145,38 @@
   border: 1px solid gray;
   cursor: default;
 }
+
 .SignUp-SocialMedia {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 100%;
 }
+
 .SignUp-Social {
-  max-width: 200px;
+  max-width: 225px;
   width: 100%;
+  height: 40px;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0.2rem;
+  align-self: center;
+  margin: 0rem auto;
   transition: 0.2s;
   font-family: "Poppins-SemiBold";
+  font-size: 14px;
 }
 
 .SignUp-facebook {
   background-color: #fff;
   color: #3b5998;
   text-decoration: none;
+  border: 1px solid lightgray;
 }
 .SignUp-facebook:hover {
   background-color: #3b5998;
   color: #fff;
+  border: 1px solid #3b5998;
 }
 
 .SignUp-Google {
@@ -226,6 +277,10 @@
   .SignUp-Img {
     display: none;
   }
+  .rightDiv {
+    width: 100%;
+    margin-top: 2rem;
+  }
   .SignUp-Agreement {
     margin: 0 0 0 0.2rem;
     color: rgb(211, 0, 214);
@@ -267,14 +322,13 @@
   }
   .SignUp-Img {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 4rem;
-    padding-left: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
     animation: animate-Click 5s linear 2s infinite;
   }
+  
   .SignUp-Img__Click {
-    width: 10rem;
+    width: 15rem;
   }
   .SignUp-Separator {
     margin: 0rem 0rem 2rem;
@@ -309,11 +363,7 @@
       58% no-repeat;
   }
   .SignUp-Img {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 4rem;
-    padding-left: 4rem;
+    justify-content: center;
   }
   .SignUp-Img__Click {
     width: 12rem;
@@ -338,6 +388,14 @@
   .SignUp-SignInSection {
     justify-content: center;
   }
+  .SignUp-Separator p {
+    /* margin: 0rem auto; */
+    align-self: center;
+    background-color: rgb(11, 0, 214);
+    align-items: center;
+    align-content: center;
+    justify-content:center;
+  }
   .SignUp-SignInSection p,
   .SignUp-SocialLogin p {
     font-size: 22px;
@@ -349,24 +407,29 @@
     width: auto;
   }
   .SignUp-SocialMedia {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
-    padding-right: 7rem;
+    padding-right: 0rem;
   }
   .SignUp-SocialLogin {
     background: url(../../assets/SVGs/Cloud-3-grey.svg) right 80% top 20% /25rem
       58% no-repeat;
   }
-  .SignUp-Img__Click {
-    width: 15rem;
+  
+  .SignUp-Img {
+    justify-content: center;
   }
+  .SignUp-Img__Click {
+    width: 12rem;
+  }
+  
   .SignUp-Agreement {
     font-size: 0.9rem;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1275px) {
   .SignUp-SignInSection p,
   .SignUp-SocialLogin p {
     font-size: 24px;

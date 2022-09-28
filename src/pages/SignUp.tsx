@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { Field, Form } from "react-final-form";
-import GoogleLogin from "react-google-login";
+// import GoogleLogin from "react-google-login";
 import { Helmet } from "react-helmet";
 import { IconContext } from "react-icons";
 import { FaFacebookF } from "react-icons/fa";
@@ -29,6 +29,8 @@ import {
 } from "../store/Actions/userSignUpActionCreator";
 import { errorToast } from "../utils/toasthelper";
 import "./styles/SignUp.css";
+import { GoogleLogin } from '@react-oauth/google';
+import jwt_decode from "jwt-decode";
 
 const Google = styled(FcGoogle)`
   background-color: #fff;
@@ -47,6 +49,7 @@ class SignUp extends Component<any, any> {
       otp: "",
       otpSent: false,
       email: "",
+      user: {}
     };
   }
   onSubmit = async (values) => {
@@ -80,19 +83,23 @@ class SignUp extends Component<any, any> {
       .then((res) => console.log(res));
     console.log(postData);
   };
-  googleLogin = (data) => {
-    console.log(data);
-    if (data?.tokenId) {
+  
+  googleLogin = (credentialResponse) => {
+    console.log("Google Data", credentialResponse);
+    var decode = jwt_decode(credentialResponse.credential);
+    this.setState({user: decode})
+    if (credentialResponse?.credential) {
       const postData: any = {
-        socialId: data.profileObj.googleId,
-        email: data.profileObj.email,
+        socialId: this.state.user.sub,
+        email: this.state.user.email,
         accountType: "google",
       };
+      console.log("Post Data", postData)
       this.props.doLogin(postData);
     } else {
-      errorToast("Login canceled");
     }
   };
+  
   facebookLogin = (data) => {
     console.log(data);
     if (data?.email) {
@@ -240,13 +247,9 @@ class SignUp extends Component<any, any> {
               )}
             />
           </Col>
-          <Col sm={6} className="SignUp-SocialLogin">
-            <div className="SignUp-Separator">
-              <span></span>
-              <p>or sign up with</p>
-              <span></span>
-            </div>
-            <div className="SignUp-SocialMedia">
+          <div className="rightDiv">
+            <p>Or</p>
+            <div className="SignIn-SocialMedia">
               <FacebookLogin
                 appId="4389598784461723"
                 fields="name,email,picture"
@@ -258,39 +261,30 @@ class SignUp extends Component<any, any> {
                     disabled={renderProps.isDisabled}
                   >
                     <FaFacebookF />
-                    Facebook
+                    Sign up with Facebook
                   </button>
                 )}
               />
-              <GoogleLogin
-                clientId="200805530561-u6lhmvq23ri5to13pirpnbmr032fjna5.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={this.googleLogin}
-                onFailure={this.googleLogin}
-                // cookiePolicy={"single_host_origin"}
-                render={(props: {
-                  onClick: () => void;
-                  disabled?: boolean;
-                }) => (
-                  <button
-                    className="SignIn-Social SignIn-Google"
-                    onClick={() => props.onClick()}
-                    disabled={props.disabled}
-                  >
-                    <IconContext.Provider value={{ size: "20px" }}>
-                      <div>
-                        <Google />
-                      </div>
-                    </IconContext.Provider>
-                    Google
-                  </button>
-                )}
-              />
+              <div className="SignIn-Social">
+                <GoogleLogin
+                  text="signup_with"
+                  theme="outline"
+                  size="large"
+                  shape="circle"
+                  width="225px"
+                  logo_alignment="center"
+                  onSuccess={this.googleLogin}
+                  onError={() => {
+                    console.log('Login Failed');
+                  }}
+                />
+              </div>
             </div>
             <div className="SignUp-Img">
               <img className="SignUp-Img__Click" src={click} alt="Click-Icon" />
             </div>
-          </Col>
+            </div>
+          {/* </Col> */}
         </Row>
       </Container>
     );

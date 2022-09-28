@@ -8,14 +8,17 @@ import { store, persistor } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <ToastContainer />
-        <App />
-      </PersistGate>
-    </Provider>
+    <GoogleOAuthProvider clientId="200805530561-u6lhmvq23ri5to13pirpnbmr032fjna5.apps.googleusercontent.com">
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <ToastContainer />
+          <App />
+        </PersistGate>
+      </Provider>
+    </GoogleOAuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
