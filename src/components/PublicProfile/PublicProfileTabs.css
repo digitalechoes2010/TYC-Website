@@ -101,7 +101,7 @@
 }
 .PublicProfileTabs-SocialProfile,
 .PublicProfileTabs-businessProfile {
-  padding: 3rem !important;
+  padding: 2rem !important;
 }
 
 .PublicProfileTabs-Business__Content {
@@ -117,9 +117,6 @@
   margin-bottom: 0.5rem;
 }
 
-.PublicProfileTabs-MediaSection {
-  padding: 3rem;
-}
 .PublicProfileTabs-MediaSection__Header {
   display: flex;
   justify-content: space-between;
@@ -161,6 +158,8 @@
 }
 .PublicProfileTabs-SubTitles {
   font-family: "Poppins-SemiBold";
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 .PublicProfileTabs-Business__info {
   color: #fff;

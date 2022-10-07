@@ -221,7 +221,7 @@ const PublicProfileTabs = (props) => {
             </Col>
           </Row>
 
-          <div className="PublicProfileTabs-MediaSection">
+          <div>
             <h3 className="PublicProfileTabs-SubTitles">Media</h3>
             <Row className="PublicProfileTabs-MediaSection__Header">
               {props.userData.medias &&
@@ -241,7 +241,7 @@ const PublicProfileTabs = (props) => {
                 })}
             </Row>
           </div>
-          <div className="PublicProfileTabs-MediaSection">
+          <div>
             <h3 className="PublicProfileTabs-SubTitles">Links</h3>
             <Row className="PublicProfileTabs-businessProfile">
               {props.userData.businessProfiles &&
