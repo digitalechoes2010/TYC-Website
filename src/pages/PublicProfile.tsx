@@ -168,151 +168,216 @@ export default class PublicProfile extends Component<any, any> {
         })
         .catch((error: any) => {});
     }
-    this.getData();
   }
   
-  getData = () => {
-    let page = this.state.page;
-
-    apiClient
-      .get(PathApi.getContactsbyUserId + page)
-      .then((data: any) => {
-        console.log("contact data", data);
-        const res = data.data;
-        if (data.status === 200) {
-          const mapData = res.contacts.map((e: any) => {
-            return {
-              userId: e.contactId,
-              userName:
-                e.contactUserDetails?.name ?? e.contactUserDetails?.username,
-              location: e.tapAddress,
-              lat: e?.location.lat,
-              lng: e?.location.long,
-              profilePic: e.contactUserDetails?.profilePic,
-            };
-          });
-          this.setState(
-            {
-              total: res.total && res.total,
-              page: parseInt(res.page),
-              size: res.size && res.size,
-              contacts: [...this.state.contacts, ...mapData],
-            },
-            () => {
-              console.log("contacts", this.state.contacts);
-              console.log(this.state.isLoading);
-            }
-          );
-        }
-      })
-      .catch((error: any) => {
-        console.log(error.response);
-        this.setState({
-          isLoading: false,
-        });
-      })
-      .finally(() => {
-        this.setState({
-          isLoading: false,
-        });
-      });
-  };
-
   render() {
     console.log(this.state.userData);
     const { userData } = this.state;
+  
+    const myVCard = new VCard();
+
+    const removeFirstWord = (string: any) => {
+      const indexOfSpace = string.indexOf(' ');
+
+      if (indexOfSpace === -1) {
+        return '';
+      }
+
+      return string.substring(indexOfSpace + 1);
+    };
+
+    const removeLastWord = (string: any) => {
+      const lastIndexOfSpace = string.lastIndexOf(' ');
+
+      if (lastIndexOfSpace === -1) {
+        return string;
+      }
+
+      return string.substring(0, lastIndexOfSpace);
+    };
+
+    let diallingCode: string;
+    let firstName: any;
+    let lastName: any;
+    
+    const splittingName = async () => {
+      if(userData.name) {
+        lastName = await removeFirstWord(userData.name);
+        firstName = await removeLastWord(userData.name);
+      } else {
+        lastName =  userData.username[0].toUpperCase() + userData.username.substring(1);
+        firstName = userData.username[0].toUpperCase() + userData.username.substring(1);
+      }
+    }
+
+    let fullAddress: string;
+    let fullAddressArray: any[];
+    let firstPartAddress: any;
+    let secondPartAddress: any;
+    let thirdPartAddress: string;
+    let fourthPartAddress: any;
+    let splitedStreet: string | undefined;
+    let splitedCity: string | undefined;
+    let splitedStateZipCode: any;
+    let splitedState: string | undefined;
+    let splitedZipCode: string | undefined;
+    let splitedCountryCode: string | undefined;
+    
+    const splittingAddress = async () => {
+      fullAddress = await userData.address;
+      fullAddressArray = fullAddress.split(',');
+      firstPartAddress = await fullAddressArray[0];
+      secondPartAddress = await fullAddressArray[1];
+      thirdPartAddress = await fullAddressArray[2];
+      fourthPartAddress = await fullAddressArray[3];
+      splitedStreet = await firstPartAddress;
+      splitedCity = await removeFirstWord(secondPartAddress);
+      splitedStateZipCode = await removeFirstWord(thirdPartAddress);
+      splitedState = await removeLastWord(splitedStateZipCode);
+      splitedZipCode = thirdPartAddress.split(' ').pop();
+      splitedCountryCode = await removeFirstWord(fourthPartAddress);
+    }
       
-  let isContact = false;
-  this.state.contacts.map((contact: any) => {
-    if(contact.userId === userData.id)
-        return isContact = true;
-    return isContact;
-  })
+    const addContact = async () => {
+      if(userData.email && userData.userBio && userData.address) {
+        countryCodes.map((countryCodeDial: any) => {
+          if(countryCodeDial.isoCode2 === userData.gender)
+            return diallingCode = countryCodeDial.countryCodes[0];
+          return diallingCode;
+        })
+        
+        await splittingName();
+        await splittingAddress();
+        
+        myVCard
+          .addName(lastName, firstName)
+          .addEmail(userData.email, 'Other')
+          .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+          .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+          
+        console.log("Generated VCard", myVCard.toString());
+          
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.email && userData.userBio) {
+        countryCodes.map((countryCodeDial: any) => {
+          if(countryCodeDial.isoCode2 === userData.gender)
+            return diallingCode = countryCodeDial.countryCodes[0];
+          return diallingCode;
+        })
+        
+        await splittingName();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addEmail(userData.email, 'Other')
+        .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.email && userData.address) {
+        await splittingName();
+        await splittingAddress();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addEmail(userData.email, 'Other')
+        .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.userBio && userData.address) {
+        countryCodes.map((countryCodeDial: any) => {
+          if(countryCodeDial.isoCode2 === userData.gender)
+            return diallingCode = countryCodeDial.countryCodes[0];
+          return diallingCode;
+        })
+        
+        await splittingName();
+        await splittingAddress();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+        .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.email) {
+        await splittingName();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addEmail(userData.email, 'Other')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.userBio) {
+        countryCodes.map((countryCodeDial: any) => {
+          if(countryCodeDial.isoCode2 === userData.gender)
+            return diallingCode = countryCodeDial.countryCodes[0];
+          return diallingCode;
+        })
+        
+        await splittingName();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else if (userData.address) {
+        await splittingName();
+        await splittingAddress();
+        
+        myVCard
+        .addName(lastName, firstName)
+        .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      } else {
+        await splittingName();
+        
+        myVCard
+        .addName(lastName, firstName)
+        
+        console.log("Generated VCard", myVCard.toString());
+        
+        new Blob([myVCard.toString()])
+        const FileSaver = require('file-saver');
+        const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
+        FileSaver.saveAs(blob, firstName + lastName + '.vcf');
+      }
+    }
     
-  const myVCard = new VCard();
-
-  const removeFirstWord = (string: any) => {
-    const indexOfSpace = string.indexOf(' ');
-
-    if (indexOfSpace === -1) {
-      return '';
-    }
-
-    return string.substring(indexOfSpace + 1);
-  };
-
-  const removeLastWord = (string: any) => {
-    const lastIndexOfSpace = string.lastIndexOf(' ');
-
-    if (lastIndexOfSpace === -1) {
-      return string;
-    }
-
-    return string.substring(0, lastIndexOfSpace);
-  };
-
-  let diallingCode: string;
-  countryCodes.map((countryCodeDial: any) => {
-    if(countryCodeDial.isoCode2 === userData.gender)
-        return diallingCode = countryCodeDial.countryCodes[0];
-    return diallingCode;
-  })
-  
-  let firstName: any;
-  let lastName: any;
-  
-  const splittingName = async () => {
-    if(userData.name.length) {
-      lastName = await removeFirstWord(userData.name);
-      firstName = await removeLastWord(userData.name);
-    } else {
-      lastName =  await userData.username[0].toUpperCase() + userData.username.substring(1);
-      firstName = await userData.username[0].toUpperCase() + userData.username.substring(1);
-    }
-  }
-
-  let fullAddress: string;
-  let fullAddressArray: any[];
-  let firstPartAddress: any;
-  let secondPartAddress: any;
-  let thirdPartAddress: string;
-  let fourthPartAddress: any;
-  let splitedStreet: string | undefined;
-  let splitedCity: string | undefined;
-  let splitedStateZipCode: any;
-  let splitedState: string | undefined;
-  let splitedZipCode: string | undefined;
-  let splitedCountryCode: string | undefined;
-  
-  const splittingAddress = async () => {
-    fullAddress = await userData.address;
-    fullAddressArray = fullAddress.split(',');
-    firstPartAddress = await fullAddressArray[0];
-    secondPartAddress = await fullAddressArray[1];
-    thirdPartAddress = await fullAddressArray[2];
-    fourthPartAddress = await fullAddressArray[3];
-    splitedStreet = await firstPartAddress;
-    splitedCity = await removeFirstWord(secondPartAddress);
-    splitedStateZipCode = await removeFirstWord(thirdPartAddress);
-    splitedState = await removeLastWord(splitedStateZipCode);
-    splitedZipCode = thirdPartAddress.split(' ').pop();
-    splitedCountryCode = await removeFirstWord(fourthPartAddress);
-  }
-    
-  const addContact = async () => {
-    await splittingName();
-    await splittingAddress();
-    myVCard
-      .addName(lastName, firstName ?? userData.username[0].toUpperCase() + userData.username.substring(1))
-      .addEmail(userData.email, 'Other')
-      .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
-      .addAddress(splitedStreet, splitedStreet, '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
-      console.log("Generated VCard", myVCard.toString());
-    new Blob([myVCard.toString()])
-    const FileSaver = require('file-saver');
-    const blob = new Blob([myVCard.toString()], {type: "text/vcard;charset=utf-8"});
-    FileSaver.saveAs(blob, firstName + lastName + '.vcf');
-  }
     const Xmark = styled(MdOutlineDisabledByDefault)`
       color: #ff9100;
       border-radius: 50px;
@@ -350,13 +415,9 @@ export default class PublicProfile extends Component<any, any> {
                 :
                   <h3 className="PublicProfile-Username">{userData.username}</h3>
                 }
-                {isContact ?
-                  <button onClick={addContact} className="Dashboard-EditProfile">
-                    Add Contact
-                  </button>
-                :
-                  null
-                }
+                <button onClick={addContact} className="Dashboard-EditProfile">
+                  Add Contact
+                </button>
                 <p className="PublicProfile-ProfileLink">
                   https://tapyourchip.com/p/{userData.link}
                 </p>
