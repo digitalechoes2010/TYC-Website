@@ -5,129 +5,131 @@ export const validateEmail = (value: string, name: string) => {
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) &&
     name == "Email"
   ) {
-    return "Invalid email address";
+    return "Invalid Email Address. Please Enter Correct Format.";
   } else if (
     !/^[\w](?!.*?\.{2})[\w.]{1,28}[\w]$/i.test(value) &&
     name == "Instagram"
   ) {
-    return "Invalid instagram username";
+    return "Invalid Instagram Username. Please Enter Correct Format.";
   } else if (
     !/^[\w](?!.*?\.{2})[\w.]{1,13}[\w]$/i.test(value) &&
     name == "Snapchat"
   ) {
-    return "Invalid Snapchat username";
+    return "Invalid Snapchat Username. Please Enter Correct Format.";
   } else if (
     !/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{2,24}$/i.test(value) &&
     name == "Tiktok"
   ) {
-    return "Invalid Tiktok username";
+    return "Invalid Tiktok Username. Please Enter Correct Format.";
   } else if (!/^[a-zA-Z0-9_]{4,15}$/i.test(value) && name == "Twitter") {
-    return "Invalid Twitter username";
+    return "Invalid Twitter Username. Please Enter Correct Format.";
   } else if (
     !/^((http(s)?:\/\/([w]{3}\.)?linkedin\.com\/)(pub|in|profile)\/([a-zA-Z0-9-]{5,30})\/?)$/i.test(
       value
     ) &&
     name == "Linkedin"
   ) {
-    return "Invalid Linkedin username";
+    return "Invalid Linkedin Link. Please Enter Correct Format.";
   } else if (
     !/^(?:(?:http|https):\/\/)?(?:www.|m.)?facebook.com\/(?!home.php)(?:(?:\w)*#!\/)?(?:pages\/)?(?:[?\w\-]*\/)?(?:profile.php\?id=(?=\d.*))?([\w\.-]+)$/i.test(
       value
     ) &&
     name == "Facebook"
   ) {
-    return "Invalid Facebook username";
+    return "Invalid Facebook Link. Please Enter Correct Format.";
   } else if (
     !/^^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$$/i.test(
       value
     ) &&
     name == "Youtube"
   ) {
-    return "Invalid Youtube username";
+    return "Invalid Youtube Link. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Pinterest"
   ) {
-    return "Invalid Pinterest username";
+    return "Invalid Pinterest Link. Please Enter Correct Format.";
   } else if (!/^(#)?[a-zA-Z0-9][\w]{2,24}$/i.test(value) && name == "Twitch") {
-    return "Invalid Twitch username";
+    return "Invalid Twitch Username. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Onlyfans"
   ) {
+    return "Invalid Onlyfans Link. Please Enter Correct Format.";
   } else if (!/^[0-9]{4,24}$/i.test(value) && name == "Whatsapp") {
-    return "Invalid Whatsapp username";
+    return "Invalid Contact Number.";
   } else if (!/^[0-9]{4,24}$/i.test(value) && name == "Text") {
-    return "Invalid Text link";
+    return "Invalid Contact Number.";
   } else if (!/^[0-9]{4,24}$/i.test(value) && name == "Call") {
-    return "Invalid Number";
+    return "Invalid Contact Number.";
   } else if (!/^[0-9]{4,24}$/i.test(value) && name == "Contact Card") {
-    return "Invalid Number";
+    return "Invalid Contact Number.";
   } else if (
-    !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
+    !/^[a-zA-Z0-9\s]+\,\s[a-zA-Z0-9\s]+\,\s[a-zA-Z\s]+\s[0-9]+\,\s[a-zA-Z\s]*$/i.test(
       value
     ) &&
     name == "Address"
   ) {
-    return "Invalid Link";
+    return "Invalid Address.";
   } else if (
     !/^(https:\/\/open.spotify.com(.*))$/i.test(
       value
     ) &&
     name == "Spotify"
   ) {
-    return "Invalid Spotify link";
+    return "Invalid Spotify Link. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Apple Music"
   ) {
-    return "Invalid Apple Music link";
+    return "Invalid Apple Music Link. Please Enter Correct Format.";
   } else if (
     !/^https?:\/\/(soundcloud\.com|snd\.sc)\/(.*)$/i.test(
       value
     ) &&
     name == "Sound cloud"
   ) {
-    return "Invalid Soundcloud link";
+    return "Invalid Sound Cloud Link. Please Enter Correct Format.";
   } else if (!/^paypal\.me\/.+$/i.test(value) && name == "Paypal") {
-    return "Invalid Paypal link";
+    return "Invalid Paypal Link. Please Enter Correct Format.";
   } else if (!/^[a-zA-Z0-9_-]{5,16}$/i.test(value) && name == "Venmo") {
+    return "Invalid Venmo Username. Please Enter Correct Format.";
   } else if (!/^(?:\s*[#$][_a-z\d-]+)+$$/i.test(value) && name == "Cash App") {
-    return "Invalid CashTag";
+    return "Invalid Cash Tag. Please Enter Correct Format.";
   } else if (
     !/^https?:\/\/([w]{3}\.)?(linktr.ee)\/(.*)$/i.test(
       value
     ) &&
     name == "Linktree"
   ) {
-    return "Invalid Linktree link";
+    return "Invalid Linktree Link. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Calendly"
   ) {
-    return "Invalid Calendly link";
+    return "Invalid Calendly Link. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Yelp"
   ) {
-    return "Invalid Yelp link";
+    return "Invalid Yelp Link. Please Enter Correct Format.";
   } else if (
     !/^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})$/i.test(
       value
     ) &&
     name == "Custom link"
   ) {
-    return "Invalid link";
+    return "Invalid Custom Link. Please Enter Correct Format.";
   } else {
     return "";
   }
