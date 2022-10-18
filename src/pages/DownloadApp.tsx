@@ -24,10 +24,7 @@ class DownloadApp extends Component<any, any> {
           <Col className="DownloadApp-downloadContainer" xs={10} md={7}>
             <Row className="DownloadApp-descriptionRow">
               <p>
-                To fully experience Tap Your Chip & its features,Feel free
-                to download the Tap Your Chip App from the links below.The
-                TYC App allows you to easily activate & manage the tag from
-                the comfort of your device.
+              To fully experience Tap Your Chip & its features, please download the mobile app from the links below. The TYC app allows you to easily activate & manage the tag.
               </p>
             </Row>
             <Row className="DownloadApp-downloadRow">

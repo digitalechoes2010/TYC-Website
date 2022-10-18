@@ -5,11 +5,17 @@ import { userUpdateRequest } from "../../../../store/Actions/userActionCreator";
 import "./ProfilePickerModal.css";
 
 const ProfilePickerModal = (props) => {
-  const { className } = props;
+  const { className, doUserUpdate } = props;
 
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+  
+  const updateProfileTabType = ()  => {
+    doUserUpdate({ profileTabType: props.profile });
+    console.log("Profile Tab Type:", props.profile);
+    toggle();
+  }
 
   return (
     <div>
@@ -32,7 +38,6 @@ const ProfilePickerModal = (props) => {
             className="ProfilePickerModal-Btns ProfilePickerModal-Social"
             onClick={() => {
               props.setProfile("Personal");
-              toggle();
             }}
           >
             Social
@@ -41,7 +46,6 @@ const ProfilePickerModal = (props) => {
             className="ProfilePickerModal-Btns ProfilePickerModal-Business"
             onClick={() => {
               props.setProfile("Business");
-              toggle();
             }}
           >
             Business
@@ -50,8 +54,6 @@ const ProfilePickerModal = (props) => {
             className="ProfilePickerModal-Btns ProfilePickerModal-Both"
             onClick={() => {
               props.setProfile("Both");
-
-              toggle();
             }}
           >
             Both
@@ -60,10 +62,7 @@ const ProfilePickerModal = (props) => {
         <ModalFooter>
           <Button
             className="ProfilePickerModal-Confirm"
-            onClick={() => {
-              // props.doUserUpdate({ profileTabType: props.profile });
-              toggle();
-            }}
+            onClick={() => {updateProfileTabType()}}
           >
             Confirm
           </Button>
@@ -76,4 +75,4 @@ const ProfilePickerModal = (props) => {
 const mapDispatchToProps = (dispatch: any) => ({
   doUserUpdate: (request: any) => dispatch(userUpdateRequest(request)),
 });
-export default connect(mapDispatchToProps)(ProfilePickerModal);
+export default connect(null,mapDispatchToProps)(ProfilePickerModal);

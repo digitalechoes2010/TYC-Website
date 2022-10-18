@@ -56,7 +56,9 @@ export default function MediaCard(props) {
           <BsFileEarmarkFont />
         </IconContext.Provider>
       ) : props.media.type ===
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ? (
+        "application/msword" || props.media.type === "application%2Fmsword" || props.media.type ===
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || props.media.type ===
+        "application%2Fvnd.openxmlformats-officedocument.wordprocessingml.document" ? (
         <IconContext.Provider
           value={{
             size: "40px",
@@ -66,8 +68,8 @@ export default function MediaCard(props) {
         >
           <BsFileEarmarkWord />
         </IconContext.Provider>
-      ) : props.media.type ===
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ? (
+      ) : props.media.type === "application/vnd.ms-excel" || props.media.type === "application%2Fvnd.ms-excel" || props.media.type === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || props.media.type ===
+        "application%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet"? (
         <IconContext.Provider
           value={{
             size: "40px",
@@ -77,8 +79,8 @@ export default function MediaCard(props) {
         >
           <BsFileEarmarkExcel />
         </IconContext.Provider>
-      ) : props.media.type ===
-        "application/vnd.openxmlformats-officedocument.presentationml.presentation" ? (
+      ) : props.media.type === "application/vnd.ms-powerpoint" || props.media.type === "application%2Fvnd.ms-powerpoint" || props.media.type === "application/vnd.openxmlformats-officedocument.presentationml.presentation" || props.media.type ===
+        "application%2Fvnd.openxmlformats-officedocument.presentationml.presentation" ? (
         <IconContext.Provider
           value={{
             size: "40px",

@@ -24,7 +24,7 @@ import "./PublicProfileTabs.css";
 
 const PublicProfileTabs = (props) => {
   const [activeTab, setActiveTab] = useState("1");
-
+  
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
@@ -82,7 +82,7 @@ const PublicProfileTabs = (props) => {
   return (
     <div>
       <Nav className="PublicProfileTabs" tabs>
-        {props.userData.Profile === "Personal" ? (
+        {props.userData.profileTabType === "Personal" ? (
           <NavItem
             className={`PublicProfileTabs-Social__Solo ${
               activeTab === "1"
@@ -102,7 +102,7 @@ const PublicProfileTabs = (props) => {
             </NavLink>{" "}
             {toggle("1")}
           </NavItem>
-        ) : props.profile === "Business" ? (
+        ) : props.userData.profileTabType === "Business" ? (
           <NavItem
             className={`PublicProfileTabs-Business__Solo ${
               activeTab === "2"
