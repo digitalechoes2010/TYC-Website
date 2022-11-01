@@ -22,8 +22,8 @@
   justify-content: center;
 }
 .Product-Img {
-  max-width: 500px;
-  max-height: 450px;
+  width: 31.25rem;
+  height: 28.125rem;
 }
 .Product-Section__Info {
   padding-top: 2rem;
@@ -85,8 +85,8 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .Product-Img {
-    max-width: 100%;
-    max-height: auto;
+    width: 100%;
+    height: auto;
   }
   .Product {
     padding: 0rem 3rem;

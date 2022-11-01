@@ -22,6 +22,7 @@ const initialOptions = {
     "AfQkKW8fbWpCGLMWFNQb2OwY9X2WLRtPq8YViXqrO-jTKwPUigx_Z1fvl8agNPw5kr6cLYLAdosZMIPV", //tyc
   currency,
   intent: "capture",
+  vault: "true"
   // "data-client-token": "7RRXB4PF82XLS",
 };
 

@@ -131,9 +131,14 @@ const NavbarComponent = (props: any) => {
               </Row>
               <Row></Row>
               <Row>
-                <NavLink className="Navbar-Checkout" href="/Cart">
-                  CHECKOUT
-                </NavLink>
+                {props.isLoggedIn.isLoggedIn === true ? 
+                  <NavLink className="Navbar-Checkout" href="/Cart">
+                    CHECKOUT
+                  </NavLink> :
+                  <NavLink className="Navbar-Checkout" href="/SignIn">
+                    CHECKOUT
+                  </NavLink> 
+                }
               </Row>
             </DropdownMenu>
           </UncontrolledDropdown>
