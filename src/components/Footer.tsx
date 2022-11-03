@@ -75,7 +75,8 @@ class Footer extends Component<any, any> {
                 <p>United States of America</p>
                 <a href="mailto:info@tapyourchip.com">info@tapyourchip.com</a>
                 <br></br>
-                <a href="tel:858-449-8059">858.449.8059</a>
+                <p>Tap Your Chip © 2022</p>
+                {/* <a href="tel:858-449-8059">858.449.8059</a> */}
               </div>
             </div>
           </Col>
@@ -170,12 +171,12 @@ class Footer extends Component<any, any> {
               </Row>
               <Row>
                 <div className="Footer-Store__Links">
-                  <Link className="Footer-Store__Btns" to="Android">
+                  <a className="Footer-Store__Btns" href="Android"> 
                     <img className="Google" src={GoogleLogo} alt="" />
-                  </Link>
-                  <Link className="Footer-Store__Btns" to="Apple">
+                  </a>
+                  <a className="Footer-Store__Btns" href="Apple"> 
                     <img className="Apple" src={AppleLogo} alt="" />
-                  </Link>
+                  </a>
                 </div>
               </Row>
             </div>

@@ -113,6 +113,7 @@ const SocialModal = (props) => {
   };
   const [modal, setModal] = useState(false);
   const [profileType, setprofileType] = useState(getProfile(props.type));
+  
   const openInNewTab = (uri: any) => {
     if (props.profile.name === "Email") {
       window.open(`mailto:${uri}`);
@@ -120,6 +121,8 @@ const SocialModal = (props) => {
       window.open(`tel:${uri}`);
     } else if (props.profile.name === "Text") {
       window.open(`sms:${uri}`);
+    } else if (props.profile.name === "Address") {
+      window.open(`https://maps.google.com/?q= ${uri}`);
     } else {
       const newWindow = window.open(
         validURLS(uri, props.title),

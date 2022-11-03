@@ -14,12 +14,12 @@ export default class Support extends Component {
         <Row>
           <Col xs={12} className="Support-Header">
             <h2>SEARCHING FOR HELP?</h2>
-            <p>Sign Up for texts and support:</p>
+            {/* <p>Sign Up for texts and support:</p>
             <p>
               Text '<span>TYC</span>' to <span>59916</span>
-            </p>
-            <p>Email us: support@tyc.co</p>
-            <p>DM us on Instagram:@tyc </p>
+            </p> */}
+            <p>Email us: info@tapyourchip.com</p>
+            <p>DM us on Instagram: @tapyourchip</p>
           </Col>
         </Row>
         <Row className="Support-TutorialSection">

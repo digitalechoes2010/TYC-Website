@@ -254,6 +254,7 @@ export default class PublicProfile extends Component<any, any> {
           .addEmail(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[1].uri : userData.email, 'Other')
           .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
           .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+          .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
           
         console.log("Generated VCard", myVCard.toString());
           
@@ -274,6 +275,7 @@ export default class PublicProfile extends Component<any, any> {
         .addName(lastName, firstName)
         .addEmail(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[1].uri : userData.email, 'Other')
         .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -289,6 +291,7 @@ export default class PublicProfile extends Component<any, any> {
         .addName(lastName, firstName)
         .addEmail(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[1].uri : userData.email, 'Other')
         .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -310,6 +313,7 @@ export default class PublicProfile extends Component<any, any> {
         .addName(lastName, firstName)
         .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
         .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -323,6 +327,7 @@ export default class PublicProfile extends Component<any, any> {
         myVCard
         .addName(lastName, firstName)
         .addEmail(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[1].uri : userData.email, 'Other')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -342,6 +347,7 @@ export default class PublicProfile extends Component<any, any> {
         myVCard
         .addName(lastName, firstName)
         .addPhoneNumber('+' + diallingCode + ' ' + userData.userBio, 'Mobile')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -356,6 +362,7 @@ export default class PublicProfile extends Component<any, any> {
         myVCard
         .addName(lastName, firstName)
         .addAddress(splitedStreet, '', '', splitedCity, splitedState, splitedZipCode, splitedCountryCode, 'Home')
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         
@@ -368,6 +375,7 @@ export default class PublicProfile extends Component<any, any> {
         
         myVCard
         .addName(lastName, firstName)
+        .addCompany(userData.buisnessCard && Array.isArray(userData.buisnessCard) ? userData.buisnessCard[4].uri : '')
         
         console.log("Generated VCard", myVCard.toString());
         

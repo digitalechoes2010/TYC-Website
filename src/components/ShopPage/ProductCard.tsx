@@ -31,7 +31,7 @@ class ProductCard extends Component<any, any> {
 
     return (
       <div className="Card">
-        {product && !product.inStock ? (
+        {product && product.inStock ? (
           <p className="Card-OutOfStock">Sold Out</p>
         ) : null}
         <Row className="Card-img__Container">
